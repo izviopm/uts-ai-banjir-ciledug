@@ -428,7 +428,8 @@ if "google.colab" in sys.modules and not db_url:
     try:
         from google.colab import userdata
         db_url = userdata.get("SUPABASE_DB_URL")
-    except Exception:
+    except Exception as e:  # tampilkan alasan (mis. Notebook access belum diizinkan)
+        print(f"Gagal membaca secret: {type(e).__name__}: {e}")
         db_url = None
 
 if not db_url:
