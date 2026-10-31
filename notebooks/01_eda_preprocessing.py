@@ -91,18 +91,11 @@ tweets.sample(6, random_state=1)
 # Kami memakai heuristik penanda leksikal khas Melayu/Malaysia (kata dan nama tempat). Tweet dengan **≥ 1 penanda** dibuang.
 
 # %%
-PENANDA_MELAYU = {
-    "mangsa", "pemindahan", "takkan", "sahaja", "kerana", "bomba", "jkm", "apm", "nadma",
-    "malaysia", "johor", "kelantan", "terengganu", "pahang", "kuantan", "mersing", "sabah", "sarawak",
-    "selangor", "kedah", "melaka", "segamat", "kemaman", "dungun", "balairaya",
-    "tarikh", "laluan", "kenderaan", "berehat", "pusat pemindahan",
-}
-PENANDA_KATA = {p for p in PENANDA_MELAYU if " " not in p}
-PENANDA_FRASA = [p for p in PENANDA_MELAYU if " " in p]
+sys.path.insert(0, "notebooks")
+import teks  # modul preprocessing bersama (notebooks/teks.py), dipakai juga di Notebook 4 dan web
 
-def skor_melayu(teks):
-    kata = set(teks.lower().split())
-    return len(kata & PENANDA_KATA) + sum(f in teks.lower() for f in PENANDA_FRASA)
+print(sorted(teks.PENANDA_MELAYU))
+skor_melayu = teks.skor_melayu
 
 tweets["skor_melayu"] = tweets.text_raw.map(skor_melayu)
 melayu = tweets[tweets.skor_melayu >= 1]
@@ -148,62 +141,22 @@ pd.DataFrame(top_lok, columns=["lokasi", "frekuensi"])
 # 5. **Stemming**: algoritma Nazief–Adriani (library Sastrawi).
 
 # %%
-from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
-from Sastrawi.StopWordRemover.StopWordRemoverFactory import StopWordRemoverFactory
+import inspect
+from IPython.display import Markdown, display
 
-stemmer = StemmerFactory().create_stemmer()
-STOPWORDS = set(StopWordRemoverFactory().get_stop_words())
-JAGA = {"tidak", "belum", "masih", "sudah", "sedang", "naik", "turun", "tinggi", "dalam", "atas", "bawah"}
-STOPWORDS -= JAGA
-STOPWORDS |= {"jadi", "nya", "sih", "deh", "nih", "kok", "yah", "dong", "kan", "via", "regrann"}
-
-SLANG = {
-    "gak": "tidak", "ga": "tidak", "enggak": "tidak", "engga": "tidak", "nggak": "tidak", "ngga": "tidak", "tdk": "tidak", "gk": "tidak",
-    "udah": "sudah", "udh": "sudah", "sdh": "sudah", "blm": "belum", "msh": "masih", "lg": "lagi",
-    "yg": "yang", "dgn": "dengan", "dg": "dengan", "utk": "untuk", "krn": "karena", "jg": "juga",
-    "bgt": "banget", "aja": "saja", "sm": "sama", "dr": "dari", "dlm": "dalam", "tp": "tapi",
-    "jkt": "jakarta", "tng": "tangerang", "bks": "bekasi", "dki": "jakarta", "jl": "jalan", "jln": "jalan",
-    "kel": "kelurahan", "kec": "kecamatan", "rt": "rt", "cm": "sentimeter", "skrg": "sekarang",
-    "bnjr": "banjir", "bjr": "banjir", "tggi": "tinggi", "smp": "sampai", "sampe": "sampai",
-}
-
-def bersihkan(teks):
-    t = teks.lower()
-    t = re.sub(r"https?://\S+|www\.\S+", " ", t)
-    t = re.sub(r"@\w+", " ", t)
-    t = t.replace("#", " ")
-    t = re.sub(r"\d+([.,:]\d+)*", " angka ", t)  # angka (tinggi air, jam, RT) jadi satu token
-    t = re.sub(r"[^a-z\s]", " ", t)
-    return re.sub(r"\s+", " ", t).strip()
-
-def preprocess(teks, stem=True):
-    kata = [SLANG.get(w, w) for w in bersihkan(teks).split()]
-    kata = [w for w in kata if w not in STOPWORDS and len(w) > 1]
-    if stem:
-        kata = [stemmer.stem(w) for w in kata]
-        kata = [w for w in kata if w not in STOPWORDS]  # hasil stem bisa jadi stopword (menjadi → jadi)
-    return " ".join(kata)
-
-contoh = tweets.text_raw.iloc[3]
-print("ASLI     :", contoh)
-print("CLEANING :", bersihkan(contoh))
-print("FINAL    :", preprocess(contoh))
+# Kode preprocessing ada di notebooks/teks.py agar identik dengan Notebook 4 dan web; ditampilkan di sini untuk dibaca
+kode = "\n\n".join(inspect.getsource(f) for f in (teks.bersihkan, teks.preprocess))
+display(Markdown(f"```python\n{kode}```"))
+print("Kata yang dipertahankan dari daftar stopword:", sorted(teks.JAGA))
+print("Contoh kamus slang:", dict(list(teks.SLANG.items())[:12]))
 
 # %%
-# Stemming kata per kata lambat, jadi cache per kata unik
-_cache = {}
-def stem_cepat(w):
-    if w not in _cache:
-        _cache[w] = stemmer.stem(w)
-    return _cache[w]
+contoh = tweets.text_raw.iloc[3]
+print("ASLI     :", contoh)
+print("CLEANING :", teks.bersihkan(contoh))
+print("FINAL    :", teks.preprocess(contoh))
 
-def preprocess_cepat(teks):
-    kata = [SLANG.get(w, w) for w in bersihkan(teks).split()]
-    kata = [stem_cepat(w) for w in kata if w not in STOPWORDS and len(w) > 1]
-    return " ".join(w for w in kata if w not in STOPWORDS)
-
-assert preprocess_cepat(contoh) == preprocess(contoh)
-tweets["text_clean"] = tweets.text_raw.map(preprocess_cepat)
+tweets["text_clean"] = tweets.text_raw.map(teks.preprocess)
 tweets = tweets[tweets.text_clean.str.len() > 0].reset_index(drop=True)
 tweets[["text_raw", "text_clean", "label"]].head(8)
 

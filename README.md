@@ -53,7 +53,3 @@ Dengan begitu, tugas klasifikasinya adalah **"laporan banjir nyata" vs "bukan la
 **Bonus:** token berlabel `B-LOC`/`PLACE-ARG`/`STREET-ARG` bisa dipakai untuk melatih atau mengevaluasi ekstraksi lokasi.
 
 **Catatan data:** sebagian tweet berbahasa Melayu (banjir Malaysia). Ini akan ditangani di tahap preprocessing dan dibahas di laporan.
-
-## Status
-
-Lihat [TODO.md](TODO.md).
