@@ -419,7 +419,7 @@ graf_json = {
     "flood_points": [{"node": idx[int(r.node)], "name": r.name, "lat": r.lat, "lon": r.lon, "radius_m": int(r.radius_m),
                       "source_url": r.source_url} for r in banjir.itertuples()],
 }
-(EXPORT / "graph_ciledug.json").write_text(json.dumps(graf_json, separators=(",", ":"), ensure_ascii=False))
+(EXPORT / "graph_ciledug.json").write_text(json.dumps(graf_json, separators=(",", ":"), ensure_ascii=False), encoding="utf8")
 print("graph_ciledug.json:", round((EXPORT / "graph_ciledug.json").stat().st_size / 1024), "KB")
 
 # %%
