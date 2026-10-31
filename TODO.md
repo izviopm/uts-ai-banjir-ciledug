@@ -106,7 +106,7 @@ Ini dipakai untuk menandai jalan tergenang di peta A*. Kalau dilewati, Claude ak
 - [x] G1. `supabase/schema.sql`: schema `uts_ai_bencana`, tabel, RLS read-only
 - [x] G2. Notebook 1: EDA + preprocessing + label tingkat tweet
 - [x] G3. Notebook 2: klasifikasi NB vs KNN vs DT, confusion matrix, metrik, tuning
-- [ ] G4. Notebook 3: peta Ciledug, BFS vs DFS vs A*, rute menghindari genangan
+- [x] G4. Notebook 3: peta Ciledug, BFS vs DFS vs A*, rute menghindari genangan
 - [ ] G5. Notebook 4: ekstraksi lokasi + ringkasan Hybrid TF-IDF
 - [ ] G6. Ekspor model/graf ke JSON + simpan ke Supabase
 - [ ] G7. Web Next.js: dashboard, klasifikasi langsung, animasi searching di peta, ringkasan
