@@ -50,7 +50,7 @@ Kalau sudah punya akunnya, cukup centang.
   2. Menu kiri **SQL Editor**, lalu **New query**
   3. Salin seluruh isi `schema.sql`, tempel, lalu klik **Run**
   4. Pastikan muncul "Success. No rows returned"
-- [ ] **D2. Ekspos schema ke API**, supaya web Next.js bisa membaca data:
+- [x] **D2. Ekspos schema ke API**, supaya web Next.js bisa membaca data:
   1. **Project Settings** (ikon gerigi), lalu **Data API**
   2. Di **Exposed schemas**, tambahkan `uts_ai_bencana`, lalu **Save**
 - [ ] **D3. Ambil connection string untuk Colab:**
@@ -70,15 +70,15 @@ Claude sudah mencari dan mengunduh **16 jurnal open access (2024–2026)** ke `r
 
 **3 PDF gagal diunduh otomatis.** Situsnya memblokir bot (Cloudflare) atau sedang down. Cara mengunduh manual:
 
-- [ ] **E1. #01 Ariyanto dkk. (2025)**, paper dataset utama dan **wajib** ada.
+- [x] **E1. #01 Ariyanto dkk. (2025)**, paper dataset utama dan **wajib** ada.
   1. Buka https://pmc.ncbi.nlm.nih.gov/articles/PMC12164043/
   2. Klik tombol **PDF** di kanan atas (di HP: menu **⋯**)
   3. Simpan ke `referensi/` dengan nama `01-ariyanto-2025-dataset-srl-krisis.pdf`
-- [ ] **E2. #11 Sari dkk. (2024)**, komparasi klasifikasi banjir dari Mercu Buana. Server jurnalnya error 404 saat dicek.
+- [x] **E2. #11 Sari dkk. (2024)**, diganti Claude dengan Gorat dkk. (2026), Naive Bayes untuk tweet banjir Sumatera. komparasi klasifikasi banjir dari Mercu Buana. Server jurnalnya error 404 saat dicek.
   1. Buka https://doi.org/10.22441/incomtech.v14i2.22962
   2. Kalau terbuka, klik **PDF**, lalu simpan sebagai `11-incomtech-2024-klasifikasi-ner-banjir.pdf`
   3. Kalau masih error, cari judulnya di https://scholar.google.com lalu klik link **[PDF]**. Kalau tetap tidak ada, lewati saja dan kabari Claude untuk mencari pengganti.
-- [ ] **E3. #15 Saraswati dkk. (2025)**, stemming dalam klasifikasi teks.
+- [x] **E3. #15 Saraswati dkk. (2025)**, stemming dalam klasifikasi teks.
   1. Buka https://journal.universitasbumigora.ac.id/index.php/matrik/article/view/4833
   2. Tunggu verifikasi "Just a moment..." selesai, lalu klik **PDF** dan unduh
   3. Simpan sebagai `15-matrik-2025-stemming-necessity.pdf`

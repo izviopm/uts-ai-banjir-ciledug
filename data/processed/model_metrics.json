@@ -20,7 +20,7 @@
    "alpha": 0.1,
    "fit_prior": false
   },
-  "train_time_ms": 18582.472299982328
+  "train_time_ms": 20654.88109999569
  },
  "knn": {
   "accuracy": 0.7540983606557377,
@@ -43,7 +43,7 @@
    "n_neighbors": 7,
    "weights": "distance"
   },
-  "train_time_ms": 1178.1725999899209
+  "train_time_ms": 1398.5806000127923
  },
  "decision_tree": {
   "accuracy": 0.6721311475409836,
@@ -67,6 +67,6 @@
    "max_depth": null,
    "min_samples_leaf": 1
   },
-  "train_time_ms": 1224.9136999889743
+  "train_time_ms": 1885.9244999766815
  }
 }

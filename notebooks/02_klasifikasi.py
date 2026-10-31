@@ -97,9 +97,9 @@ for nama, (clf, grid) in kandidat.items():
     proba = best.predict_proba(X_test)[:, 1]
     terbaik[nama] = best
     hasil[nama] = dict(
-        accuracy=accuracy_score(y_test, y_pred), precision_score=precision_score(y_test, y_pred),
-        recall=recall_score(y_test, y_pred), f1=f1_score(y_test, y_pred),
-        cv_f1_mean=cvs.mean(), cv_f1_std=cvs.std(),
+        accuracy=float(accuracy_score(y_test, y_pred)), precision_score=float(precision_score(y_test, y_pred)),
+        recall=float(recall_score(y_test, y_pred)), f1=float(f1_score(y_test, y_pred)),
+        cv_f1_mean=float(cvs.mean()), cv_f1_std=float(cvs.std()),  # float(): psycopg2 tidak mengenali np.float64
         confusion_matrix=confusion_matrix(y_test, y_pred).tolist(),
         best_params={k.replace("clf__", ""): v for k, v in gs.best_params_.items()},
         train_time_ms=waktu, y_pred=y_pred, proba=proba,
