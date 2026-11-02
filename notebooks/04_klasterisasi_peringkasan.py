@@ -222,26 +222,9 @@ plt.tight_layout(); plt.savefig(FIG / "04_klaster.png", dpi=150); plt.show()
 #   sudah terpilih, agar ringkasan tidak berulang (Inouye & Kalita, 2011).
 
 # %%
-def hybrid_tfidf(kalimat_bersih, n=3, ambang=11, batas_mirip=0.77):
-    """Kembalikan indeks n tweet terpilih + skor. `kalimat_bersih`: list teks hasil preprocess."""
-    tok = [s.split() for s in kalimat_bersih]
-    semua = Counter(w for t in tok for w in t)
-    total = sum(semua.values())
-    df_w = Counter(w for t in tok for w in set(t))
-    N = len(tok)
-    bobot = {w: (semua[w] / total) * math.log2(N / df_w[w]) for w in semua}
-    skor = np.array([sum(bobot[w] for w in t) / max(ambang, len(t)) for t in tok])
-    vec = [Counter(t) for t in tok]
-    def cos(a, b):
-        num = sum(a[w] * b[w] for w in a if w in b)
-        return num / (math.sqrt(sum(v * v for v in a.values())) * math.sqrt(sum(v * v for v in b.values())) or 1)
-    pilih = []
-    for i in skor.argsort()[::-1]:
-        if all(cos(vec[i], vec[j]) <= batas_mirip for j in pilih):
-            pilih.append(int(i))
-        if len(pilih) == n:
-            break
-    return pilih, skor
+import inspect
+from ringkas import hybrid_tfidf  # notebooks/ringkas.py: satu sumber kode untuk notebook dan acuan web
+print(inspect.getsource(hybrid_tfidf))
 
 def tfidf_standar(kalimat_bersih, n=3):
     """Baseline: jumlah bobot TF-IDF biasa per tweet tanpa normalisasi panjang dan tanpa cek redundansi."""

@@ -1,0 +1,194 @@
+[
+ {
+  "text_raw": "teman-teman mari bantu donasi atau sebarkan info ini untuk saudara2 kita korban banjir bandang di papua lewat",
+  "text_clean": "teman teman bantu donasi sebar info saudara angka korban banjir bandang papua lewat",
+  "p_laporan": 0.1773218968,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "anies baru paham kalau air banjir bukan dari jakarta banjir datangnya air bukan dari jakarta datangnya dari hulu sana bogor dan malam itu saya bayangkan semua warga di sini ya ? air enggak bisa milih-milih kalau api bisa kelewat satu rumah air enggak bisa `` kata anies",
+  "text_clean": "anies baru paham kalau air banjir bukan jakarta banjir datang air bukan jakarta datang hulu sana bogor malam bayang semua warga sini air tidak milih milih kalau api lewat satu rumah air tidak kata anies",
+  "p_laporan": 0.0199112772,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "konsumsi siap di bungkus untuk kemudian akan segera di distribusikan ke masyarakat terdampak banjir di wilayah kecamatan pesanggaran",
+  "text_clean": "konsumsi siap bungkus kemudian segera distribusi masyarakat dampak banjir wilayah camat sanggar",
+  "p_laporan": 0.1978507905,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "penanganan banjir di jalan sor gbla gedebage 11/4 oleh urc upt gedebage dpu cc",
+  "text_clean": "tangan banjir jalan sor gbla gedebage angka angka urc upt gedebage dpu cc",
+  "p_laporan": 0.4533865799,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "bintik meminta tolong rt nya kemarin pas banjir ketemu mereka ciri2 loreng2 di badannya yang merasa kehilangan/mau adopt dm saja enggak mampu adopt soalnya di rumah sudah ada 17 gabus terima kasih bintik",
+  "text_clean": "bintik minta rt kemarin pas banjir ketemu ciri angka loreng angka badan rasa hilang mau adopt dm tidak mampu adopt soal rumah sudah angka gabus terima kasih bintik",
+  "p_laporan": 0.0760362245,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "jalan ciledug raya macet total cendrung tak bergerak mulai dari taman puring akibat banjir di jalan swadharma depan pool taksi ratax",
+  "text_clean": "jalan ciledug raya macet total cendrung tak gerak mulai taman puring akibat banjir jalan swadharma depan pool taksi ratax",
+  "p_laporan": 0.6729146728,
+  "label": "laporan"
+ },
+ {
+  "text_raw": "gubernur tinjau korban banjir di simpanggambir warga setuju pindah dari bantaran sungai",
+  "text_clean": "gubernur tinjau korban banjir simpanggambir warga tuju pindah bantaran sungai",
+  "p_laporan": 0.5692482517,
+  "label": "laporan"
+ },
+ {
+  "text_raw": "eaaaaaaaaaaa bu bupati coba urus dulu lah masalah lingkungan banjir tahunan contohnya di karang ligar jalan-jalan yang tiap tahun berlubang kualitas pendidikan di kabupaten karawang juga perlu masalah publik lainnya yang lebih berguna daripada cuma mengurusi masalah privat warga",
+  "text_clean": "eaaaaaaaaaaa bu bupati coba urus dulu lah masalah lingkung banjir tahun contoh karang ligar jalan jalan tiap tahun lubang kualitas didik kabupaten karawang perlu masalah publik lebih cuma urus masalah privat warga",
+  "p_laporan": 0.0523326707,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "18:40 laporan langsung arulin yang terdampak banjir/genangan air akibat hujan deras di kota garut oleh kasat lantas polres garut cc :",
+  "text_clean": "angka lapor langsung arulin dampak banjir genang air akibat hujan deras kota garut kasat lantas polres garut cc",
+  "p_laporan": 0.8368093893,
+  "label": "laporan"
+ },
+ {
+  "text_raw": "ggd anambas peduli korban banjir dan longsor selengkapnya di tembusan : ayahanda sinaga",
+  "text_clean": "ggd anambas peduli korban banjir longsor lengkap tembus ayahanda sinaga",
+  "p_laporan": 0.3283780941,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "banjir di jalan raya kepanjen di depan garasi bus bagong banyak sampah yang keluar dari selokan",
+  "text_clean": "banjir jalan raya kepanjen depan garasi bus bagong banyak sampah keluar selokan",
+  "p_laporan": 0.2244322627,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "mungkin pmrintah masih sibuk dengan sengketa & medianya mungkin juga menyibukkan dari untuk ngeliput sengketa seandainya banjir ini datang sebelum pemilu pasti banyak adegan2 lucu dari pr caleg maupun wapres/capres terutama yang sering selfi di tempat bencana siapakah itu yuk dengar lagunya",
+  "text_clean": "mungkin pmrintah masih sibuk sengketa media mungkin sibuk ngeliput sengketa banjir datang milu banyak adegan angka lucu pr caleg maupun wapres capres utama sering selfi tempat bencana siapa yuk dengar lagu",
+  "p_laporan": 0.0482230973,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "pak tolong dong selesaikan masalah banjir di wilayah kapuk kecamatan cengkareng jakarta barat selama bapak menjabat masalah banjir disini bukan terselesaikan tapi semakin parah",
+  "text_clean": "pak selesai masalah banjir wilayah kapuk camat cengkareng jakarta barat lama bapak jabat masalah banjir sini bukan selesai makin parah",
+  "p_laporan": 0.1037421499,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "pembagian bantuan banjir di desa idaman kecamatan patia",
+  "text_clean": "bantu banjir desa idam camat patia",
+  "p_laporan": 0.5374852177,
+  "label": "laporan"
+ },
+ {
+  "text_raw": "banjir bandang di sentani papua info sementara yang beredar : jembatan tahara putus jembatan doyo putus jembatan kemiri putus & rumah2 hancur",
+  "text_clean": "banjir bandang sentani papua info edar jembatan tahara putus jembatan doyo putus jembatan kemiri putus rumah angka hancur",
+  "p_laporan": 0.6272855321,
+  "label": "laporan"
+ },
+ {
+  "text_raw": "tadi mimpi MPR DPR bikin aturan baru. pokoknya siapapun yg kepilih jadi gubernur DKI harus minum semua air banjir pake sedotan gede",
+  "text_clean": "tadi mimpi mpr dpr bikin atur baru pokok siapa pilih gubernur jakarta minum semua air banjir pake sedot gede",
+  "p_laporan": 0.0858730568,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "Korban borjuis kecil di Binong Permai  Tangerang yang serakah bangun banyak perumahan baru hilangkan lahan serapan air. Banjir 60 cm. Pukul 14.10 WIB (3/3/2018). @AboutTNG https://t.co/YOdUbmRZgy",
+  "text_clean": "korban borjuis kecil bong permai tangerang serakah bangun banyak rumah baru hilang lahan serap air banjir angka sentimeter pukul angka wib angka angka angka",
+  "p_laporan": 0.8588360799,
+  "label": "laporan"
+ },
+ {
+  "text_raw": "4 For 90k Carls Jr for GO-FOOD deliveries from February 26 -28  2018 Info Lengkap: https://t.co/PeqYNiNcFR . #calrsjr #burger #SeninSemangatin #murah #promo #BreakingNews #banjir #hemat #kuliner #jakarta #bandung #surabaya",
+  "text_clean": "angka for angka carls jr for go food deliveries from february angka angka angka info lengkap calrsjr burger seninsemangatin murah promo breakingnews banjir hemat kuliner jakarta bandung surabaya",
+  "p_laporan": 0.3627527393,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "Banjir di Tangerang  Anies Baswedan yang Diserang https://t.co/sValXB5jvE https://t.co/5EQHFRyvaF",
+  "text_clean": "banjir tangerang anies baswedan serang",
+  "p_laporan": 0.0766394932,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "anies bukan yang pertama yang gemar menyalahkan orang lain.  dahulu Twitter pernah melihat lelucon bahwa banjir jakarta adalah salah jan pieterszoon coen saking tidak ada yang mau disalahkan. https://t.co/bAdeG9cFsR",
+  "text_clean": "anies bukan pertama gemar salah orang twitter pernah lihat lelucon banjir jakarta salah jan pieterszoon coen saking tidak mau salah",
+  "p_laporan": 0.0138358114,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "Sepanjang jalan jakarta banjir lagiiiii  motor dan mobil citycar lebih baik muterbalikkkk~ @infobdg https://t.co/LyhIm3gjDp",
+  "text_clean": "panjang jalan jakarta banjir lagiiiii motor mobil citycar lebih baik muterbalikkkk",
+  "p_laporan": 0.1665885229,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "Juli ini ditargetkan Bendungan Ciawi rampung.  Semoga bisa mengurangi derita warga Jakarta yang keseringan didera banjir.  ~ Jokowi Gas Pol Infrastruktur ~ https://t.co/zcdU0MXWgP",
+  "text_clean": "juli target bendung ciawi rampung moga kurang derita warga jakarta sering dera banjir jokowi gas pol infrastruktur",
+  "p_laporan": 0.0396868883,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "Sifat air itu cair dan hanya bisa mengalir dari hulu ke hilir  Mengatasi banjir Jakarta itu cuma satu ganti Gub juga Wagub nya  - Wooiii @ArizaPatria lu kira air itu macam buruh yang bisa lu atur 3 Shift 😂😂 https://t.co/44y7tFpM0m",
+  "text_clean": "sifat air cair alir hulu hilir atas banjir jakarta cuma satu ganti gub wagub wooiii lu kira air macam buruh lu atur angka shift",
+  "p_laporan": 0.0658778059,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "Seandainya mobil  motor  atw mungkin becak juga bisa manjat pagar saat banjir  mungkin bisa juga jadi alternatif baru nih buat Jakarta. Hahahaha      😝 https://t.co/bSiMfu16Vv",
+  "text_clean": "mobil motor atw mungkin becak manjat pagar banjir mungkin alternatif baru buat jakarta hahahaha",
+  "p_laporan": 0.2002633684,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "Innaalillahi  Jakarta banjir lagi  semoga nanti Ada pemimpin Jakarta yang rendah hati  tak ujub takabur merasa sudah banyak berbuat \"  Doa seorang pemuka agama yang SITUASIONAL  Tergantung Gubernurnya  Allah bahkan didikte sesuai selera  https://t.co/CSaXcbj9ZU",
+  "text_clean": "innaalillahi jakarta banjir moga pimpin jakarta rendah hati tak ujub takabur rasa sudah banyak buat doa orang muka agama situasional gantung gubernur allah bahkan dikte sesuai selera",
+  "p_laporan": 0.0665284359,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "Hampir Seluruh Wilayah Jakarta Barat Secara Luas Akan Tenggelam Banjir Karena Muara ke-4 Sungainya Ditutup Pulau D @aniesbaswedan #DirgahayuReklamasi  @JJRizal @KojekRapBetawi @yaya__nh @mkusumawijaya @elisa_jkt @KiaraIndonesia @DPPKNTI @walhinasional @KiaraIndonesia https://t.co/FVnqSgGzPV",
+  "text_clean": "hampir seluruh wilayah jakarta barat luas tenggelam banjir muara angka sungai tutup pulau dirgahayureklamasi",
+  "p_laporan": 0.5929008341,
+  "label": "laporan"
+ },
+ {
+  "text_raw": "Foke yg cuma ingin bekerja 10 tahun jadi Gubernur Jakarta  dijegal dan dihakimi se Indonesia krn lebih memilih orang dari luar Jakarta yg berkata banjir dan macet mudah diatasi. Dua tahun kemudian sudah khianat terhadap amanat warga Jakarta.",
+  "text_clean": "foke cuma kerja angka tahun gubernur jakarta jegal hakim se indonesia lebih pilih orang luar jakarta kata banjir macet mudah atas tahun kemudian sudah khianat amanat warga jakarta",
+  "p_laporan": 0.0243861483,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "Kegiatan relawan nasional Front Persaudaraan Islam (FPI) hari Sabtu (2/7/2022)  di posko bencana banjir bandang Leuwiliang Kabupaten Bogor antara lain melakukan penyerahan mesin steam untuk korban bencana banjir bandang Leuwiliang Kabupaten Bogor. https://t.co/VOGwudTHvM",
+  "text_clean": "giat rawan nasional front saudara islam fpi hari sabtu angka angka angka posko bencana banjir bandang leuwiliang kabupaten bogor laku serah mesin steam korban bencana banjir bandang leuwiliang kabupaten bogor",
+  "p_laporan": 0.2941886427,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "Kang @BimaAryaS mestinya sibuk kerja baktinya sebelum datang musim penghujan  jangan sesudah kejadian banjir dan longsor.  Hanya masukan dari salahsatu warga Bogor 🙏🏻",
+  "text_clean": "kang mesti sibuk kerja bakti datang musim hujan jangan banjir longsor masuk salahsatu warga bogor",
+  "p_laporan": 0.1301836943,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "Anies menghentikan reklamasi  itu salah satu cara mengendalikan banjir Jakarta jg. Studi ilmiah menyimpulkan reklamasi bakal memperparah banjir.  https://t.co/kvP35gmP1I",
+  "text_clean": "anies henti reklamasi salah satu cara kendali banjir jakarta studi ilmiah simpul reklamasi bakal parah banjir",
+  "p_laporan": 0.0147364693,
+  "label": "bukan_laporan"
+ },
+ {
+  "text_raw": "Banjir 50 cm di Jl. HOS Cokroaminoto Ciledug, motor mogok!! https://t.co/x @bpbd",
+  "text_clean": "banjir angka sentimeter jalan hos cokroaminoto ciledug motor mogok",
+  "p_laporan": 0.9724518468,
+  "label": "laporan"
+ },
+ {
+  "text_raw": "Gak banjir kok, udah surut dari tadi pagi",
+  "text_clean": "tidak banjir sudah surut tadi pagi",
+  "p_laporan": 0.6435597727,
+  "label": "laporan"
+ }
+]

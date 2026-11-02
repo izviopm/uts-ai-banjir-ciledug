@@ -1,6 +1,7 @@
 # Lembar Ringkasan Acuan — Izvio
 
 **Instruksi** (baca dulu):
+
 1. Kerjakan **sendiri**, jangan melihat lembar anggota lain, dan **jangan memakai AI** (ChatGPT, Gemini, dsb.).
 2. Untuk setiap set, baca ke-25 tweet, lalu tulis ringkasan **2–3 kalimat (±40–60 kata)** dengan kata-katamu sendiri:
    apa yang terjadi, di mana, dan dampak/hal penting yang paling sering disebut.
@@ -37,6 +38,8 @@
 
 RINGKASAN:
 
+Banjir melanda sejumlah kawasan di Jakarta dan Tangerang, seperti Sunter, Tanjung Barat, hingga Cisauk, yang memicu kemacetan parah dan banyaknya kendaraan mogok. Kondisi ini umumnya disebabkan oleh curah hujan tinggi serta permukaan jalan yang tidak merata. Sebagai solusi efektif untuk mengatasi genangan lokal di area perkantoran dan hunian, pembuatan sumur resapan perlu dimasifkan.
+
 ---
 
 ## S02
@@ -68,6 +71,8 @@ RINGKASAN:
 25. Banjir beberapa hari ini di DKI warisan peninggalan gabener @aniesbaswedan yg ga pernah kerja..Jakarta sengaja dibikin rusak banjir &amp; macet Ga usah bnyk nomong yg teknis aja" -Fahri Hamzah..."Anies busyettt" -Prof Tjipta Lesmana
 
 RINGKASAN:
+
+Banjir Jakarta merupakan masalah menahun yang masih merendam sebagian wilayah dan mengganggu mobilitas publik, termasuk memutus jalur lintasan kereta api. Upaya penanggulangan lokal melalui sumur resapan dinilai masyarakat tidak efektif dalam mengatasi genangan air. Sebagai solusi pencegahan jangka panjang, pembangunan infrastruktur seperti Bendungan Ciawi terus dirampungkan untuk menekan kerentanan banjir ibu kota.
 
 ---
 
@@ -101,6 +106,8 @@ RINGKASAN:
 
 RINGKASAN:
 
+Banjir setinggi betis melanda kawasan Perumahan Taman Cibodas, Kota Tangerang, yang mengakibatkan air mulai memasuki sejumlah rumah warga. Genangan air ini terjadi akibat meluapnya aliran Kali Sabi setelah wilayah tersebut diguyur hujan deras. Warga setempat kini terus bersiaga dan khawatir menghadapi potensi kenaikan debit air yang lebih tinggi.
+
 ---
 
 ## S04
@@ -132,6 +139,8 @@ RINGKASAN:
 25. Selamat Natal selamat bersuka cita. Apa permintaanmu di Hari Natal ini? Kalau saya sederhana: semoga Jakarta tak banjir #magnaindonesia #SelamatNatalSobatNKRI #MerryChristmas2019
 
 RINGKASAN:
+
+Hujan deras terpantau melanda kawasan Ciledug dan sekitarnya, memicu kekhawatiran warga terhadap potensi banjir di area rawan seperti Perumahan Ciledug Indah. Kondisi cuaca ekstrem ini sejalan dengan peringatan siaga banjir dari BMKG untuk wilayah Jabodetabek. Masyarakat diimbau untuk terus meningkatkan kewaspadaan terhadap ancaman genangan air.
 
 ---
 
@@ -165,6 +174,8 @@ RINGKASAN:
 
 RINGKASAN:
 
+Penanganan banjir di Jakarta dan wilayah sekitarnya, termasuk Tangerang, difokuskan pada upaya normalisasi sungai, pembuatan sumur resapan, dan pengerahan pompa bergerak. Penggunaan pompa tersebut sangat esensial untuk mempercepat penyedotan genangan di daerah cekungan agar target surut dalam enam jam dapat tercapai. Banjir yang berulang ini juga tercatat pernah memicu gugatan hukum dari ratusan warga terdampak.
+
 ---
 
 ## S06
@@ -196,6 +207,8 @@ RINGKASAN:
 25. @kangmeirza @aniesbaswedan @P3nj3l4j4h @MurtadhaOne @JajangRidwan19 @RizmaWidiono @YRadianto @triwul82 @heniunique Saya bangga ada Gubernur @aniesbaswedan @DKIJakarta yang bisa mengatasi banjir 👍 sudah seiman dengan warganya skg dikasih wahana berenang gratis. Selamat bang @pandji atas pilihannya. #BikinMalu aja
 
 RINGKASAN:
+
+Banjir dan kemacetan parah masih menjadi tantangan utama di wilayah Jakarta hingga Ciledug, khususnya di kawasan Puri Beta. Penanganan masalah ini membutuhkan solusi menyeluruh dari hulu ke hilir, termasuk pengoperasian Sodetan Ciliwung secara kolaboratif. Selain itu, penerapan lubang biopori, drainase vertikal, dan gerakan menabung air hujan sangat penting sebagai langkah mitigasi.
 
 ---
 
@@ -229,6 +242,8 @@ RINGKASAN:
 
 RINGKASAN:
 
+Banjir di Jakarta masih menjadi ancaman serius yang rawan melanda ratusan kelurahan dan pernah memaksa ribuan warga mengungsi. Upaya mitigasi teknis terus dilakukan melalui pengerukan waduk, pembuatan ribuan sumur resapan, serta pemantauan terintegrasi via layanan darurat 112. Meski demikian, fenomena penurunan muka tanah tetap menjadi tantangan utama penyebab genangan air.
+
 ---
 
 ## S08
@@ -260,6 +275,8 @@ RINGKASAN:
 25. kemang raya dan sekitarnya. 17.35 wib. hujan. jakarta. banjir.
 
 RINGKASAN:
+
+Hujan deras yang melanda kawasan Tangerang telah memicu banjir di berbagai titik, seperti Cisauk, Cikokol, hingga Serpong. Bencana genangan air ini tidak hanya merendam fasilitas umum seperti masjid dan puskesmas di Rawa Buntu, tetapi juga sempat melumpuhkan akses transportasi masyarakat. Kemacetan parah akibat genangan ini bahkan mendorong keluhan warga melalui petisi.
 
 ---
 
@@ -293,6 +310,8 @@ RINGKASAN:
 
 RINGKASAN:
 
+Banjir merendam puluhan titik di kawasan Bekasi, termasuk Jatiasih, Kaliabang, dan Bekasi Barat, dengan ketinggian air yang bervariasi hingga mencapai enam meter. Kondisi ini menyebabkan kemacetan lalu lintas, banyaknya kendaraan mogok, serta memicu evakuasi darurat bagi warga terdampak. Tata ruang dan perizinan pembangunan pun diimbau untuk dievaluasi sebagai langkah pencegahan.
+
 ---
 
 ## S10
@@ -324,5 +343,7 @@ RINGKASAN:
 25. Jadi Biang Kerok Banjir di Kramat Jati Kali Induk Akan Dinormalisasi - Suara Jakarta
 
 RINGKASAN:
+
+Luapan Kali Ciliwung menjadi salah satu penyebab utama banjir di Jakarta, yang sempat merendam permukiman warga hingga ketinggian 140 sentimeter. Sebagai langkah mitigasi, pemerintah berfokus pada pengangkutan tumpukan sampah, pengerukan waduk, serta pembebasan lahan bantaran untuk normalisasi sungai. Selain itu, penyelesaian proyek Sodetan Ciliwung terus dipercepat guna menekan risiko genangan secara signifikan.
 
 ---

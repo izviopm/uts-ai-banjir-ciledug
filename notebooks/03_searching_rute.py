@@ -413,8 +413,9 @@ print(f"- Menghindari genangan menambah jarak A* rata-rata {(rb.banjir - rb.norm
 idx = {n: i for i, n in enumerate(adj)}
 graf_json = {
     "center": PUSAT, "penalti": PENALTI,
-    "nodes": [[round(LAT[n], 6), round(LON[n], 6)] for n in adj],
-    "edges": [[idx[u], idx[v], round(L, 1), int(f)] for u, nbs in adj.items() for v, L, f in nbs],
+    # tanpa pembulatan: pembulatan sekecil 0,1 m sudah mengubah urutan expand A* sehingga web tidak identik dengan notebook
+    "nodes": [[LAT[n], LON[n]] for n in adj],
+    "edges": [[idx[u], idx[v], L, int(f)] for u, nbs in adj.items() for v, L, f in nbs],
     "safe_places": [{"node": idx[int(r.node)], "name": r.name, "kind": r.kind, "lat": r.lat, "lon": r.lon} for r in aman.itertuples()],
     "flood_points": [{"node": idx[int(r.node)], "name": r.name, "lat": r.lat, "lon": r.lon, "radius_m": int(r.radius_m),
                       "source_url": r.source_url} for r in banjir.itertuples()],
