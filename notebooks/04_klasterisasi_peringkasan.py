@@ -9,17 +9,38 @@
 # 3. **Meringkas** setiap klaster menjadi beberapa tweet paling representatif dengan **Hybrid TF-IDF** (Sharifi dkk., 2010).
 # 4. **Mengevaluasi** ringkasan dengan ROUGE terhadap ringkasan acuan buatan manusia, dibanding baseline.
 #
-# Korpus: 43.028 tweet banjir mentah 2018–2023 (Ariyanto dkk., 2025), difokuskan ke wilayah **Jabodetabek**.
+# Korpus: 43.023 tweet banjir mentah 2018–2023 (Ariyanto dkk., 2025), difokuskan ke wilayah **Jabodetabek**.
+#
+# **Reprodusibilitas.** Klasterisasi sensitif terhadap pembulatan angka di SVD dan K-Means. Agar Colab dan laptop menghasilkan
+# klaster yang sama, sel pertama (1) memasang versi library yang sama (`requirements.txt`), (2) membatasi komputasi ke 1 thread,
+# dan (3) memaksa OpenBLAS memakai kernel CPU yang sama (Haswell/AVX2). Di Colab, sel ini memasang library lalu **me-restart
+# runtime sekali**; setelah restart, jalankan **Runtime → Run all** lagi.
 
 # %%
 import os, subprocess, sys
+if "numpy" in sys.modules:
+    print("⚠ numpy sudah dimuat sebelum sel ini; pengaturan BLAS mungkin tidak berlaku. Restart runtime lalu Run all.")
+for v in ["OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS"]:
+    os.environ[v] = "1"                      # urutan penjumlahan tidak bergantung jumlah core
+os.environ["OPENBLAS_CORETYPE"] = "Haswell"  # kernel BLAS sama di laptop (AVX2) dan server Colab (AVX-512)
 from pathlib import Path
 
 if "google.colab" in sys.modules:
-    subprocess.run([sys.executable, "-m", "pip", "install", "-q", "Sastrawi"], check=True)
     if not Path("/content/repo").exists():
         subprocess.run(["git", "clone", "-q", "https://github.com/izviopm/uts-ai-banjir-ciledug.git", "/content/repo"], check=True)
     os.chdir("/content/repo")
+    from importlib.metadata import version, PackageNotFoundError
+    def cocok(baris):
+        nama, ver = baris.split("==")
+        try:
+            return version(nama) == ver
+        except PackageNotFoundError:
+            return False
+    syarat = [b.strip() for b in open("requirements.txt") if "==" in b and not b.startswith("#")]
+    if not all(map(cocok, syarat)):
+        subprocess.run([sys.executable, "-m", "pip", "install", "-q", *syarat], check=True)
+        print("Library acuan terpasang. Runtime di-restart; jalankan Runtime → Run all sekali lagi.")
+        os.kill(os.getpid(), 9)
 elif Path("../data").exists():
     os.chdir("..")
 sys.path.insert(0, "notebooks")
@@ -38,6 +59,8 @@ from sklearn.pipeline import make_pipeline
 from sklearn.cluster import KMeans, AgglomerativeClustering
 from sklearn.metrics import silhouette_score, davies_bouldin_score, calinski_harabasz_score
 import teks
+from threadpoolctl import threadpool_limits
+threadpool_limits(1)  # jaga-jaga bila variabel lingkungan thread tidak terbaca
 
 sns.set_theme(style="whitegrid")
 FIG = Path("laporan/gambar"); FIG.mkdir(parents=True, exist_ok=True)
@@ -456,6 +479,8 @@ if "google.colab" in sys.modules and not db_url:
 
 ukuran = lambda d: sorted(c["jumlah"] for c in d["klaster"])
 sama_acuan = klaster_acuan is None or ukuran(klaster_acuan) == ukuran(klaster_json)
+if klaster_acuan is not None and sama_acuan:
+    print("✓ Hasil klaster identik dengan acuan di repo:", ukuran(klaster_json))
 if not sama_acuan:
     print("⚠ Hasil klaster berbeda dengan versi acuan di repo (kemungkinan versi library berbeda).\n"
           "  Supabase TIDAK ditimpa agar tetap konsisten dengan laporan dan web.")

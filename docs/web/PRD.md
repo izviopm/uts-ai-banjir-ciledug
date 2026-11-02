@@ -54,7 +54,7 @@ Semua riset sudah selesai di notebook Python. Web dibutuhkan untuk **presentasi 
 ## 5. Alur demo presentasi (± 5 menit)
 
 1. Beranda → jelaskan masalah dan alur agen.
-2. Klaster & Ringkasan → tunjukkan klaster "genangan jalan" (54,7% laporan) dan ringkasannya, lalu bandingkan dengan klaster politik.
+2. Klaster & Ringkasan → tunjukkan klaster dengan % laporan tertinggi (paling atas di halaman) dan ringkasannya, lalu bandingkan dengan klaster politik.
 3. Tempel beberapa tweet → ringkasan langsung muncul (F3).
 4. Rute Evakuasi → pilih "Jalan Raden Saleh Raya", toggle banjir → rute berubah dari 0,23 km menjadi 1,73 km; jalankan animasi BFS vs DFS vs A*.
 5. Klasifikasi → ketik tweet sendiri (F6).

@@ -1,0 +1,639 @@
+{
+ "nb1": {
+  "total": 1220,
+  "laporan": 368,
+  "latih": 976,
+  "uji": 244,
+  "melayu": 30,
+  "awal": 1250
+ },
+ "nb2": {
+  "naive_bayes": {
+   "accuracy": 0.7663934426229508,
+   "precision_score": 0.6164383561643836,
+   "recall": 0.6081081081081081,
+   "f1": 0.6122448979591837,
+   "cv_f1_mean": 0.6873044142209497,
+   "cv_f1_std": 0.024799464884249358,
+   "confusion_matrix": [
+    [
+     142,
+     28
+    ],
+    [
+     29,
+     45
+    ]
+   ],
+   "best_params": {
+    "alpha": 0.1,
+    "fit_prior": false
+   },
+   "train_time_ms": 20654.88109999569
+  },
+  "knn": {
+   "accuracy": 0.7540983606557377,
+   "precision_score": 0.609375,
+   "recall": 0.527027027027027,
+   "f1": 0.5652173913043478,
+   "cv_f1_mean": 0.5851120027590616,
+   "cv_f1_std": 0.043603970596339595,
+   "confusion_matrix": [
+    [
+     145,
+     25
+    ],
+    [
+     35,
+     39
+    ]
+   ],
+   "best_params": {
+    "n_neighbors": 7,
+    "weights": "distance"
+   },
+   "train_time_ms": 1398.5806000127923
+  },
+  "decision_tree": {
+   "accuracy": 0.6721311475409836,
+   "precision_score": 0.4673913043478261,
+   "recall": 0.581081081081081,
+   "f1": 0.5180722891566265,
+   "cv_f1_mean": 0.5177081844170293,
+   "cv_f1_std": 0.05827074460869156,
+   "confusion_matrix": [
+    [
+     121,
+     49
+    ],
+    [
+     31,
+     43
+    ]
+   ],
+   "best_params": {
+    "criterion": "entropy",
+    "max_depth": null,
+    "min_samples_leaf": 1
+   },
+   "train_time_ms": 1885.9244999766815
+  }
+ },
+ "nb2_vocab": 2851,
+ "nb3": {
+  "node": 19066,
+  "ruas_genang": 717,
+  "ruas": 43689,
+  "benchmark": {
+   "BFS": {
+    "expanded": 9556.24,
+    "runtime_ms": 5.94,
+    "rasio": 1.3,
+    "optimal": 2.0
+   },
+   "DFS": {
+    "expanded": 9137.22,
+    "runtime_ms": 6.88,
+    "rasio": 39.77,
+    "optimal": 0.0
+   },
+   "UCS": {
+    "expanded": 8748.48,
+    "runtime_ms": 12.73,
+    "rasio": 1.0,
+    "optimal": 100.0
+   },
+   "A*": {
+    "expanded": 2546.54,
+    "runtime_ms": 7.05,
+    "rasio": 1.0,
+    "optimal": 100.0
+   }
+  },
+  "rasio_astar_ucs": 3.4,
+  "tambah_jarak": 324.0,
+  "rata_titik_banjir": {
+   "normal|BFS": {
+    "jarak": 1278.4992857142856,
+    "expanded": 621.4285714285714
+   },
+   "normal|DFS": {
+    "jarak": 10408.221857142857,
+    "expanded": 290.42857142857144
+   },
+   "normal|UCS": {
+    "jarak": 1145.9104285714286,
+    "expanded": 691.2857142857143
+   },
+   "normal|A*": {
+    "jarak": 1145.9104285714286,
+    "expanded": 161.0
+   },
+   "banjir|BFS": {
+    "jarak": 1278.4992857142856,
+    "expanded": 621.4285714285714
+   },
+   "banjir|DFS": {
+    "jarak": 10408.221857142857,
+    "expanded": 290.42857142857144
+   },
+   "banjir|UCS": {
+    "jarak": 1469.9732857142858,
+    "expanded": 554.7142857142857
+   },
+   "banjir|A*": {
+    "jarak": 1469.9732857142858,
+    "expanded": 135.57142857142858
+   }
+  },
+  "studi": {
+   "normal|BFS": {
+    "jarak": 227.549,
+    "expanded": 8,
+    "langkah": 2
+   },
+   "normal|DFS": {
+    "jarak": 13066.814,
+    "expanded": 232,
+    "langkah": 162
+   },
+   "normal|UCS": {
+    "jarak": 227.549,
+    "expanded": 11,
+    "langkah": 2
+   },
+   "normal|A*": {
+    "jarak": 227.549,
+    "expanded": 4,
+    "langkah": 2
+   },
+   "banjir|BFS": {
+    "jarak": 227.549,
+    "expanded": 8,
+    "langkah": 2
+   },
+   "banjir|DFS": {
+    "jarak": 13066.814,
+    "expanded": 232,
+    "langkah": 162
+   },
+   "banjir|UCS": {
+    "jarak": 1732.421,
+    "expanded": 299,
+    "langkah": 20
+   },
+   "banjir|A*": {
+    "jarak": 1732.421,
+    "expanded": 109,
+    "langkah": 20
+   }
+  },
+  "banjir": [
+   {
+    "name": "Perumahan Ciledug Indah",
+    "radius": 250,
+    "sumber": "https://www.liputan6.com/news/read/5944273/banjir-melanda-perumahan-ciledug-indah-kota-tangerang-ketinggian-air-30-50-cm"
+   },
+   {
+    "name": "Komplek Puri Kartika, Tajur",
+    "radius": 200,
+    "sumber": "https://banten.idntimes.com/news/banten/21-titik-di-8-kecamatan-di-kota-tangerang-tergenang-banjir-c1c2-01-h9ml6-glx88x"
+   },
+   {
+    "name": "Komplek Griya Kencana",
+    "radius": 200,
+    "sumber": "https://banten.idntimes.com/news/banten/21-titik-di-8-kecamatan-di-kota-tangerang-tergenang-banjir-c1c2-01-h9ml6-glx88x"
+   },
+   {
+    "name": "Komplek Taman Asri, Cipadu",
+    "radius": 200,
+    "sumber": "https://banten.idntimes.com/news/banten/21-titik-di-8-kecamatan-di-kota-tangerang-tergenang-banjir-c1c2-01-h9ml6-glx88x"
+   },
+   {
+    "name": "Kreo, Larangan",
+    "radius": 300,
+    "sumber": "https://banten.idntimes.com/news/banten/21-titik-di-8-kecamatan-di-kota-tangerang-tergenang-banjir-c1c2-01-h9ml6-glx88x"
+   },
+   {
+    "name": "Jalan Inpres Raya, Gaga",
+    "radius": 150,
+    "sumber": "https://banten.idntimes.com/news/banten/21-titik-di-8-kecamatan-di-kota-tangerang-tergenang-banjir-c1c2-01-h9ml6-glx88x"
+   },
+   {
+    "name": "Jalan Raden Saleh Raya, Karang Mulya",
+    "radius": 150,
+    "sumber": "https://banten.idntimes.com/news/banten/21-titik-di-8-kecamatan-di-kota-tangerang-tergenang-banjir-c1c2-01-h9ml6-glx88x"
+   }
+  ],
+  "aman": 65
+ },
+ "nb4": {
+  "lingkungan": "Python 3.14.7 | numpy 2.5.4, pandas 3.1.0, scikit-learn 1.9.1, scipy 1.18.1, Sastrawi 1.0.1",
+  "mentah": 43018,
+  "jabodetabek": 3491,
+  "bersih": 3444,
+  "korpus": 3390,
+  "laporan_nb": 539,
+  "kosakata": 2665,
+  "lsa_var": 26.4,
+  "kmeans_unggul": 100.0,
+  "k": 11,
+  "Agglomerative": {
+   "silhouette": 0.0135,
+   "davies_bouldin": 4.6546,
+   "calinski_harabasz": 30.233
+  },
+  "K-Means": {
+   "silhouette": 0.0667,
+   "davies_bouldin": 4.3049,
+   "calinski_harabasz": 45.439
+  },
+  "klaster": [
+   {
+    "id": 9,
+    "jumlah": 141,
+    "pct_laporan": 76.6,
+    "kata_kunci": "tangerang, angka, kota, kabupaten, rumah, malam, hujan, deras",
+    "ringkasan": [
+     {
+      "text": "Kondisi banjir genangi kawasan industri Olex  Balaraja  Kabupaten Tangerang  Jumat (30/12/2022) sekitar pukul 17.00 WIB. https://t.co/YA9rxvbIHP",
+      "waktu": "2022-12-30",
+      "skor": 0.023973,
+      "p_laporan": 0.993,
+      "sumber": "laporan"
+     },
+     {
+      "text": "Banjir melanda beberapa wilayah Tangerang akibat hujan deras  Senin (26/9/2022) malam. https://t.co/PX2GbWqcHA",
+      "waktu": "2022-09-26",
+      "skor": 0.023676,
+      "p_laporan": 0.99,
+      "sumber": "laporan"
+     },
+     {
+      "text": "Pasca banjir  muncul ular sepanjang 4 5 meter di Perumahan Binong Permai Blok B  Curug  Kabupaten Tangerang  Kamis (16/5/2019) pukul 01:00 WIB. https://t.co/0VAJUbXY8E",
+      "waktu": "2019-05-15",
+      "skor": 0.023314,
+      "p_laporan": 0.895,
+      "sumber": "laporan"
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "jumlah": 165,
+    "pct_laporan": 37.0,
+    "kata_kunci": "bekas, angka, rumah, kota, hujan, warga, bantu, kab",
+    "ringkasan": [
+     {
+      "text": "Banjir di wilayah Kelurahan Wanajaya Kecamatan Cibitung RW 07 Bekasi pada sore hari ini  Senin  18/5/20. https://t.co/ECFwkOiBoQ",
+      "waktu": "2020-05-18",
+      "skor": 0.025408,
+      "p_laporan": 0.978,
+      "sumber": "laporan"
+     },
+     {
+      "text": "BPBD Kabupaten Bekasi pada Sabtu (25/2)  pukul 15.35 merilis data sebaran dampak banjir di Kabupaten Bekasi. Sebanyak 9 Kecamatan  20 Desa/Kelurahan di 43 titik di Kabupaten Bekasi terendam banjir berkisar 20 s.d 100 cm.  Dimana saja yang terdampak? Sila cek infografisnya ya.. https://t.co/xcwS74mZ3j",
+      "waktu": "2023-02-25",
+      "skor": 0.02207,
+      "p_laporan": 0.987,
+      "sumber": "laporan"
+     },
+     {
+      "text": "@RadioElshinta @petabencana  Banjir di Perumnas 1 Bekasi Barat dekat Masjid Al Muhajidin sudah 1 5 m dijalanan https://t.co/PNOR76AQrx",
+      "waktu": "2020-01-01",
+      "skor": 0.021178,
+      "p_laporan": 0.687,
+      "sumber": "laporan"
+     }
+    ]
+   },
+   {
+    "id": 6,
+    "jumlah": 510,
+    "pct_laporan": 32.7,
+    "kata_kunci": "angka, jalan, rt, rumah, tahun, banjirjakarta, hujan, hari",
+    "ringkasan": [
+     {
+      "text": "Sebagian banjir sudah surut di Jakarta. Sebagian warga kembali ke rumahnya. Saat ini pengungsi 338 KK dan 1.317 Jiwa. Lokasi pengungsi berada berada di 10 titik lokasi  7 titik di wilayah Jakarta Timur   2 titik di wilayah Jakarta Selatan dan 1 titik di wilayah Jakarta Barat. https://t.co/OgC0ZDq9ta",
+      "waktu": "2019-04-27",
+      "skor": 0.014738,
+      "p_laporan": 0.994,
+      "sumber": "laporan"
+     },
+     {
+      "text": "Banjir Rendam Ratusan Rumah Warga di Pejaten Timur Jakarta Selatan  Tinggi Air 1 hingga 2 Meter https://t.co/eAt2VmooEJ https://t.co/x71XWbxKDq",
+      "waktu": "2022-05-05",
+      "skor": 0.014716,
+      "p_laporan": 0.998,
+      "sumber": "laporan"
+     },
+     {
+      "text": "27 RT di DKI Jakarta Masih Terendam Banjir dengan Ketinggian Lebih dari 40 Cm   https://t.co/bkLGTDfZ2h  Bahagia warganya",
+      "waktu": "2022-06-07",
+      "skor": 0.014651,
+      "p_laporan": 0.957,
+      "sumber": "laporan"
+     }
+    ]
+   },
+   {
+    "id": 10,
+    "jumlah": 155,
+    "pct_laporan": 16.8,
+    "kata_kunci": "bogor, kirim, longsor, bandang, angka, bantu, bencana, hujan",
+    "ringkasan": [
+     {
+      "text": "FPI Kota Bogor bantu bersihkan sampah akibat banjir di Karawang  Rabu 17-02/2020 https://t.co/bDjQNMu1nb",
+      "waktu": "2021-02-17",
+      "skor": 0.022318,
+      "p_laporan": 0.547,
+      "sumber": "laporan"
+     },
+     {
+      "text": "Hari Rabu (29/6)  Relawan gabungan Front Persaudaraan Islam (FPI) serta Relawan PA 212 masih berjibaku membersihkan lumpur sisa banjir di jalan-jalan dan pemukiman warga Kampung Cisarua  Desa Purasari  Kecamatan Leuwiliang.  Bogor. https://t.co/n6Gfhygvv4",
+      "waktu": "2022-06-29",
+      "skor": 0.021396,
+      "p_laporan": 0.776,
+      "sumber": "laporan"
+     },
+     {
+      "text": "Selamat malam teman2… Saat dalam perjalanan menuju ke lokasi bencana banjir bandang di Kec.Leuwiliang Bogor saya mendapatkan kabar dari keluarga adek bayi kembar ini bahwa kedua adek bayi ini sudah meninggal dunia sekitar jam 7 malam tadi…",
+      "waktu": "2022-06-24",
+      "skor": 0.021234,
+      "p_laporan": 0.602,
+      "sumber": "laporan"
+     }
+    ]
+   },
+   {
+    "id": 8,
+    "jumlah": 228,
+    "pct_laporan": 12.7,
+    "kata_kunci": "air, angka, mata, tanah, laut, masuk, genang, tidak",
+    "ringkasan": [
+     {
+      "text": "Bagi anak senja 1% air  99% kenangan  Bagi anak kimia 1% air  99% H2O  Bagi anak Jakarta 1% air  99% banjir 🥺",
+      "waktu": "2020-10-16",
+      "skor": 0.021992,
+      "p_laporan": 0.775,
+      "sumber": "laporan"
+     },
+     {
+      "text": "Banjir rob dikawasan Lodan  Ancol Jakarta Utara Tinggi air mencapai 60 cm  Semoga bisa cepat dikendalikan  @DKIJakarta @BPBDJakarta https://t.co/4WiVGBfMEL",
+      "waktu": "2020-06-04",
+      "skor": 0.017387,
+      "p_laporan": 0.917,
+      "sumber": "laporan"
+     },
+     {
+      "text": "@aniesbaswedan pak.. jakarta utara pintu air pelabuhan sunda kelapa banjir rob dri laut... sudah mencapai 1 meter ke jalan mohon di tinjau @DKIJakarta @NajwaShihab https://t.co/pXs7HyfK7h",
+      "waktu": "2020-06-04",
+      "skor": 0.0167,
+      "p_laporan": 0.726,
+      "sumber": "laporan"
+     }
+    ]
+   },
+   {
+    "id": 4,
+    "jumlah": 950,
+    "pct_laporan": 11.3,
+    "kata_kunci": "warga, sudah, hujan, buat, bukan, pak, jalan, apa",
+    "ringkasan": [
+     {
+      "text": "*Foto banjir di Tangerang disebar sebagai banjir di Jakarta*  Dalam hati netizen: Jangan komen Jangan komen Jangan komen Jangan komen Jangan komen Jangan komen Jangan komen Jangan komen Jangan komen Jangan ko-  Jempol netizen: Maaf  itu bionya tolong di-update jadi PENGECER HOAX. https://t.co/1NhffOsAhA",
+      "waktu": "2018-11-16",
+      "skor": 0.027204,
+      "p_laporan": 0.69,
+      "sumber": "laporan"
+     },
+     {
+      "text": "Imbas cicaheum banjir  macetnya sampe jl. Jakarta arah kota  yang mau jalan jalan urungkan niatnya @PRFMnews @infobdg @sekitarbandung_ https://t.co/hzRvHEeMGe",
+      "waktu": "2018-03-20",
+      "skor": 0.023298,
+      "p_laporan": 0.752,
+      "sumber": "laporan"
+     },
+     {
+      "text": "Jalan raya depan Ciledug Indah 1 sudah mulai terendam banjir. Mohon dihindari jalan tersebut. https://t.co/49VLIxo4dL",
+      "waktu": "2022-09-10",
+      "skor": 0.02141,
+      "p_laporan": 0.719,
+      "sumber": "laporan"
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "jumlah": 196,
+    "pct_laporan": 11.2,
+    "kata_kunci": "ciliwung, sungai, kali, angka, normalisasi, sodet, kurang, luap",
+    "ringkasan": [
+     {
+      "text": "Kali Ciliwung meluap  22 RT terendam banjir di DKI Jakarta hingga 140 cm hari ini juga saya gak bersuara. Tanyain juga dong.",
+      "waktu": "2022-06-01",
+      "skor": 0.027605,
+      "p_laporan": 0.963,
+      "sumber": "laporan"
+     },
+     {
+      "text": "Bendung Katulampa Siaga 1. Tinggi muka air 220 cm pada 25/4/2019 pukul 20.20 WIB. Waspadai banjir di bantaran sungai sekitar Sungai Ciliwung. https://t.co/BZgkreQEMX",
+      "waktu": "2019-04-25",
+      "skor": 0.025563,
+      "p_laporan": 0.825,
+      "sumber": "laporan"
+     },
+     {
+      "text": "Sungai Ciliwung Meluap  Kebon Pala Terendam Banjir Hingga 1 Meter - Metro https://t.co/goyZM0D4uq  https://t.co/sgxaPrLxHp",
+      "waktu": "2020-03-27",
+      "skor": 0.024589,
+      "p_laporan": 0.949,
+      "sumber": "laporan"
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "jumlah": 366,
+    "pct_laporan": 4.1,
+    "kata_kunci": "tidak, angka, hujan, sudah, warga, kerja, macet, sama",
+    "ringkasan": [
+     {
+      "text": "Depok tidak hujan  tapi mampang prapatan Depok banjir  lalin macet dari 4 arah https://t.co/PmgsmsJVQt",
+      "waktu": "2023-06-19",
+      "skor": 0.021922,
+      "p_laporan": 0.951,
+      "sumber": "laporan"
+     },
+     {
+      "text": "Banjir gak penting  rumah warga tenggelam juga gak penting. Yg penting Formula E dan proyek bagi2 kue. Ye kan  @aniesbaswedan ?  Waspada Banjir Besar  46 RW di Jakarta Sudah Terendam  https://t.co/y051guBkUn",
+      "waktu": "2020-02-20",
+      "skor": 0.01961,
+      "p_laporan": 0.567,
+      "sumber": "laporan"
+     },
+     {
+      "text": "Tidak sampai 2 tahun  Jakarta sudah hancur. • Premanisme merajalela  • Macet makin parah  • Banjir tidak surut-surut. • Polusi malah makin sadis. • TIM mau dihancurkan demi memuaskan pengembang hotel.  Sedih dan merana  wahai JKT58.  https://t.co/Ajrz5uuvgN",
+      "waktu": "2019-11-27",
+      "skor": 0.019606,
+      "p_laporan": 0.562,
+      "sumber": "laporan"
+     }
+    ]
+   },
+   {
+    "id": 1,
+    "jumlah": 191,
+    "pct_laporan": 1.0,
+    "kata_kunci": "gubernur, tidak, angka, hari, soal, malah, bukan, sudah",
+    "ringkasan": [
+     {
+      "text": "Tak perlu waktu 5 tahun bagi Pj Gubernur DKI Jakarta; Heru Budi Hartono untuk membenahi Jakarta dari “banjir dan macet” tapi cukup 2 tahun saja  sampai tahun 2024.  INI SOAL NIAT DAN KESERIUSAN KERJA BUKAN SOAL PANDAI BICARA ! https://t.co/1FZgfFRxjl",
+      "waktu": "2022-10-12",
+      "skor": 0.012125,
+      "p_laporan": 0.005,
+      "sumber": "semua"
+     },
+     {
+      "text": "@KangSemproel Lha  2013 banjir di Jakarta mengakibatkan 41 orang tewas  tapi gubernurnya bukan mundur  malah maju jadi capres... 🤔 https://t.co/X4jggZHvVp",
+      "waktu": "2021-12-10",
+      "skor": 0.011715,
+      "p_laporan": 0.106,
+      "sumber": "semua"
+     },
+     {
+      "text": "Sumber permasalahan di DKI bukan banjir  bukan kemacetan dan bukan juga Covid-19. Tp sumber permasalahannya adl Anies  krn dia selaku Gubernur tdk becus mengurus daerahnya. Coba saja kalo dia becus  pasti semua persoalan yg ada di DKI bisa diselesaikan.  #4niesDanCovidBerbahaya https://t.co/UrqTZGaD3s",
+      "waktu": "2020-09-11",
+      "skor": 0.011694,
+      "p_laporan": 0.008,
+      "sumber": "semua"
+     }
+    ]
+   },
+   {
+    "id": 0,
+    "jumlah": 315,
+    "pct_laporan": 0.6,
+    "kata_kunci": "anies, baswedan, angka, kerja, pak, tidak, salah, tangan",
+    "ringkasan": [
+     {
+      "text": "Jakarta banjir  Kadrun nyalahin pak Heru yang baru kerja 20 hari  Anies Baswedan 5 tahun ngapain aja..?? 😴",
+      "waktu": "2022-11-05",
+      "skor": 0.014562,
+      "p_laporan": 0.025,
+      "sumber": "semua"
+     },
+     {
+      "text": "Survey mengatakan  74 9 persen warga Jakarta Puas dengan kinerja Anies Tangani Banjir. https://t.co/n47KTQ565p",
+      "waktu": "2022-07-26",
+      "skor": 0.014444,
+      "p_laporan": 0.114,
+      "sumber": "semua"
+     },
+     {
+      "text": "Anies Pastikan Duit DKI Fokus di Covid-19 dan Pengendalian Banjir  “Tidak ada pembangunan infrastruktur baru ” kata Anies dalam keterangannya  Sabtu (4/7/2020)  https://t.co/zbXOzSublY",
+      "waktu": "2020-07-05",
+      "skor": 0.014228,
+      "p_laporan": 0.05,
+      "sumber": "semua"
+     }
+    ]
+   },
+   {
+    "id": 7,
+    "jumlah": 173,
+    "pct_laporan": 0.0,
+    "kata_kunci": "presiden, atas, mudah, jokowi, macet, bendung, lebih, ciawi",
+    "ringkasan": [
+     {
+      "text": "Bendungan kering pengendali Banjir Jakarta.  Bendungan Sukamahi yang direncanakan 1990-an  mulai dibangun pada masa Jokowi di 2017.  Saat ini Progres pembangunan Bendungan Sukamahi telah mencapai 60% &amp; Bendungan Ciawi 73% ditargetkan rampung pada 2021.  https://t.co/IptVwha3Je https://t.co/an4Mx3IF8u",
+      "waktu": "2020-12-08",
+      "skor": 0.024166,
+      "p_laporan": 0.01,
+      "sumber": "semua"
+     },
+     {
+      "text": "Walikota Solo  Joko Widodo: “Kelihatannya nggak sulit-sulit amat atasi macet dan banjir Jakarta.” (Solo  28/06/2011) https://t.co/urTlATW1q1",
+      "waktu": "2018-07-05",
+      "skor": 0.022615,
+      "p_laporan": 0.12,
+      "sumber": "semua"
+     },
+     {
+      "text": "Solusi 3 Pejabat Negara utk atasi Macet &amp; Banjir👇  Walikota Solo: Kelihatannya gak sulit2 amat atasi Macet &amp; Banjir Jakarta  Gubernur DKI: Macet &amp; Banjir lebih mudah diatasi jika jadi Presiden  Presiden: Untuk mengatasi Macet &amp; Banjir Ibukota Indonesia kita Pindah Aja !!  🤦‍♂️🤦‍♂️🤦‍♂️ https://t.co/yfdospDSi9",
+      "waktu": "2019-09-16",
+      "skor": 0.021361,
+      "p_laporan": 0.01,
+      "sumber": "semua"
+     }
+    ]
+   }
+  ],
+  "rouge": {
+   "Hybrid TF-IDF": {
+    "R1": 0.176,
+    "R2": 0.029,
+    "RL": 0.1177
+   },
+   "TF-IDF standar": {
+    "R1": 0.1492,
+    "R2": 0.0289,
+    "RL": 0.0979
+   },
+   "Acak (rata-rata 20×)": {
+    "R1": 0.1744,
+    "R2": 0.0284,
+    "RL": 0.119
+   }
+  },
+  "sepakat": {
+   "R1": 0.2978,
+   "R2": 0.0565,
+   "RL": 0.1639
+  },
+  "wilcoxon": [
+   {
+    "pembanding": "Acak (rata-rata 20×)",
+    "metrik": "R1",
+    "unggul": "5/10 set",
+    "selisih": 0.0016,
+    "p": 0.77
+   },
+   {
+    "pembanding": "Acak (rata-rata 20×)",
+    "metrik": "R2",
+    "unggul": "3/10 set",
+    "selisih": 0.0005,
+    "p": 0.492
+   },
+   {
+    "pembanding": "Acak (rata-rata 20×)",
+    "metrik": "RL",
+    "unggul": "6/10 set",
+    "selisih": -0.0013,
+    "p": 1.0
+   },
+   {
+    "pembanding": "TF-IDF standar",
+    "metrik": "R1",
+    "unggul": "6/10 set",
+    "selisih": 0.0268,
+    "p": 0.16
+   },
+   {
+    "pembanding": "TF-IDF standar",
+    "metrik": "R2",
+    "unggul": "6/10 set",
+    "selisih": 0.0001,
+    "p": 0.77
+   },
+   {
+    "pembanding": "TF-IDF standar",
+    "metrik": "RL",
+    "unggul": "6/10 set",
+    "selisih": 0.0198,
+    "p": 0.16
+   }
+  ]
+ }
+}

@@ -1,0 +1,6 @@
+# Versi lingkungan acuan. Notebook 4 (klasterisasi) memasang versi ini di Colab agar hasilnya identik dengan laptop.
+numpy==2.5.4
+pandas==3.1.0
+scikit-learn==1.9.1
+scipy==1.18.1
+Sastrawi==1.0.1
