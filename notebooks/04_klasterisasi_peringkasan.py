@@ -46,6 +46,13 @@ REF = Path("data/reference"); REF.mkdir(parents=True, exist_ok=True)
 SEED = 42
 pd.set_option("display.max_colwidth", 150)
 
+# Lingkungan acuan: hasil klasterisasi sensitif terhadap versi library (struktur klaster lemah, silhouette < 0,1),
+# sehingga versi dicatat. Hasil resmi (laporan, web, Supabase) berasal dari lingkungan yang tercetak di output repo ini.
+from importlib.metadata import version
+print("Python", sys.version.split()[0], "|", ", ".join(f"{p} {version(p)}" for p in ["numpy", "pandas", "scikit-learn", "scipy", "Sastrawi"]))
+f_acuan = EXPORT / "klaster_ringkasan.json"
+klaster_acuan = json.loads(f_acuan.read_text(encoding="utf8")) if f_acuan.exists() else None  # versi di repo, sebelum ditimpa
+
 # %% [markdown]
 # ## 1. Korpus: tweet banjir Jabodetabek
 # Penyaringan:
@@ -447,7 +454,12 @@ if "google.colab" in sys.modules and not db_url:
         print(f"Gagal membaca secret: {type(e).__name__}: {e}")
         db_url = None
 
-if not db_url:
+ukuran = lambda d: sorted(c["jumlah"] for c in d["klaster"])
+sama_acuan = klaster_acuan is None or ukuran(klaster_acuan) == ukuran(klaster_json)
+if not sama_acuan:
+    print("⚠ Hasil klaster berbeda dengan versi acuan di repo (kemungkinan versi library berbeda).\n"
+          "  Supabase TIDAK ditimpa agar tetap konsisten dengan laporan dan web.")
+elif not db_url:
     print("SUPABASE_DB_URL tidak ditemukan — penyimpanan ke Supabase dilewati.")
 else:
     import psycopg2
