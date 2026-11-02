@@ -215,6 +215,29 @@ model = KMeans(n_clusters=K, n_init=10, random_state=SEED) if ALGO == "K-Means" 
 df["klaster"] = model.fit_predict(X)
 
 # %% [markdown]
+# **Pemeriksaan reprodusibilitas.** Label klaster tiap tweet dibandingkan dengan label acuan dari laptop memakai
+# *Adjusted Rand Index* (ARI; 1 = pembagian identik, tidak terpengaruh penomoran klaster). Sidik (hash) korpus dan fitur X
+# menunjukkan di tahap mana perbedaan muncul: korpus beda → preprocessing; X beda → komputasi numerik (CPU/BLAS).
+
+# %%
+import hashlib
+from sklearn.metrics import adjusted_rand_score
+jejak = dict(korpus=hashlib.md5("\n".join(df.text_clean).encode()).hexdigest()[:10],
+             X=hashlib.md5(np.round(X, 5).tobytes()).hexdigest()[:10])
+f_label = REF / "label_klaster_acuan.json"
+if f_label.exists():
+    acuan = json.loads(f_label.read_text(encoding="utf8"))
+    print(f"Sidik korpus : {jejak['korpus']} (acuan {acuan['korpus']})")
+    print(f"Sidik fitur X: {jejak['X']} (acuan {acuan['X']})")
+    if len(acuan["label"]) == len(df):
+        print(f"Kesepakatan label dengan acuan laptop (ARI): {adjusted_rand_score(acuan['label'], df.klaster):.4f}")
+    else:
+        print(f"Jumlah tweet berbeda: {len(df)} vs acuan {len(acuan['label'])}")
+else:  # pertama kali di lingkungan acuan: simpan label sebagai acuan
+    f_label.write_text(json.dumps(dict(jejak, label=df.klaster.tolist())), encoding="utf8")
+    print("Label acuan disimpan:", f_label, jejak)
+
+# %% [markdown]
 # ## 5. Profil klaster
 # Kata kunci tiap klaster = kata dengan rata-rata bobot TF-IDF tertinggi di klaster tersebut.
 # Kolom `%laporan` = proporsi tweet yang diprediksi Naive Bayes sebagai laporan kejadian.
