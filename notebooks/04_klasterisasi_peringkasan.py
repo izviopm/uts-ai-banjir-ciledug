@@ -57,6 +57,7 @@ pd.set_option("display.max_colwidth", 150)
 raw = pd.read_csv("data/raw/mendeley-srl-crisis/flood-with-english-translation.csv")
 raw["waktu"] = pd.to_datetime(raw.created_at, errors="coerce", utc=True)
 raw = raw[raw.waktu.notna()].rename(columns={"full_text_in_Indonesian": "text_raw"})
+raw = raw.dropna(subset=["text_raw"])  # 5 tweet tanpa teks; di pandas 2.x (Colab) NaN membuat filter str.contains gagal
 print("Korpus mentah:", len(raw))
 
 WILAYAH = r"jakarta|tangerang|ciledug|bekasi|depok|bogor|jabodetabek|\bdki\b|kali angke|ciliwung"
