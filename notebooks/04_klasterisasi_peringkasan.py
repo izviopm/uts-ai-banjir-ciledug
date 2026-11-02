@@ -15,6 +15,7 @@
 # klaster yang sama, sel pertama (1) memasang versi library yang sama (`requirements.txt`), (2) membatasi komputasi ke 1 thread,
 # dan (3) memaksa OpenBLAS memakai kernel CPU yang sama (Haswell/AVX2). Di Colab, sel ini memasang library lalu **me-restart
 # runtime sekali**; setelah restart, jalankan **Runtime → Run all** lagi.
+# Selain itu K-Means memakai centroid awal dari Agglomerative Ward (bagian 4) sehingga tidak bergantung pada inisialisasi acak.
 
 # %%
 import os, subprocess, sys
@@ -154,13 +155,25 @@ print(f"Kosakata: {X_tfidf.shape[1]} kata · LSA 100 dimensi menjelaskan {var:.1
 # | **Calinski-Harabasz** | Rasio variansi antar klaster terhadap dalam klaster | tinggi |
 #
 # *k* dicari pada rentang 3–20. Batas bawah 3 dipakai karena 2 klaster terlalu kasar untuk laporan situasi.
+#
+# **Inisialisasi K-Means.** Pada data ini banyak solusi K-Means yang inertia-nya hampir sama, sehingga inisialisasi acak
+# (k-means++) bisa berakhir di solusi berbeda hanya karena selisih pembulatan CPU 1e-9 (ARI laptop vs Colab ≈ 0,58).
+# Karena itu centroid awal K-Means diambil dari hasil Agglomerative Ward (deterministik, tanpa angka acak), lalu disempurnakan
+# dengan iterasi Lloyd. Uji gangguan numerik 1e-12…1e-6 menghasilkan ARI = 1,0 (hasil stabil).
 
 # %%
+def kmeans_ward(k, lab_ward=None):
+    """K-Means dengan centroid awal = rata-rata tiap klaster Agglomerative Ward (stabil terhadap pembulatan CPU)."""
+    if lab_ward is None:
+        lab_ward = AgglomerativeClustering(n_clusters=k, linkage="ward").fit_predict(X)
+    awal = np.vstack([X[lab_ward == i].mean(axis=0) for i in range(k)])
+    return KMeans(n_clusters=k, init=awal, n_init=1).fit(X)
+
 hasil_k = []
 for k in range(3, 21):
-    for nama, model in [("K-Means", KMeans(n_clusters=k, n_init=10, random_state=SEED)),
-                        ("Agglomerative", AgglomerativeClustering(n_clusters=k, linkage="ward"))]:
-        lab = model.fit_predict(X)
+    ward = AgglomerativeClustering(n_clusters=k, linkage="ward").fit(X)
+    for nama, model in [("K-Means", kmeans_ward(k, ward.labels_)), ("Agglomerative", ward)]:
+        lab = model.labels_
         hasil_k.append(dict(algoritma=nama, k=k, silhouette=silhouette_score(X, lab, metric="cosine", random_state=SEED),
                             davies_bouldin=davies_bouldin_score(X, lab), calinski_harabasz=calinski_harabasz_score(X, lab),
                             inertia=getattr(model, "inertia_", np.nan)))
@@ -213,8 +226,8 @@ plt.tight_layout(); plt.savefig(FIG / "04_elbow.png", dpi=150); plt.show()
 hasil_k[(hasil_k.k == K)].set_index("algoritma").round(4)
 
 # %%
-model = KMeans(n_clusters=K, n_init=10, random_state=SEED) if ALGO == "K-Means" else AgglomerativeClustering(n_clusters=K, linkage="ward")
-df["klaster"] = model.fit_predict(X)
+model = kmeans_ward(K) if ALGO == "K-Means" else AgglomerativeClustering(n_clusters=K, linkage="ward").fit(X)
+df["klaster"] = model.labels_
 
 # %% [markdown]
 # **Pemeriksaan reprodusibilitas.** Label klaster tiap tweet dibandingkan dengan label acuan dari laptop memakai

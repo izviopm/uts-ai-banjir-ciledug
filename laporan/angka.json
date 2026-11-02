@@ -244,326 +244,326 @@
    "calinski_harabasz": 30.233
   },
   "K-Means": {
-   "silhouette": 0.0667,
-   "davies_bouldin": 4.3049,
-   "calinski_harabasz": 45.439
+   "silhouette": 0.0695,
+   "davies_bouldin": 3.9655,
+   "calinski_harabasz": 44.8694
   },
   "klaster": [
    {
-    "id": 9,
-    "jumlah": 141,
-    "pct_laporan": 76.6,
+    "id": 10,
+    "jumlah": 140,
+    "pct_laporan": 75.7,
     "kata_kunci": "tangerang, angka, kota, kabupaten, rumah, malam, hujan, deras",
     "ringkasan": [
      {
       "text": "Kondisi banjir genangi kawasan industri Olex  Balaraja  Kabupaten Tangerang  Jumat (30/12/2022) sekitar pukul 17.00 WIB. https://t.co/YA9rxvbIHP",
       "waktu": "2022-12-30",
-      "skor": 0.023973,
+      "skor": 0.023636,
       "p_laporan": 0.993,
       "sumber": "laporan"
      },
      {
       "text": "Banjir melanda beberapa wilayah Tangerang akibat hujan deras  Senin (26/9/2022) malam. https://t.co/PX2GbWqcHA",
       "waktu": "2022-09-26",
-      "skor": 0.023676,
+      "skor": 0.023417,
       "p_laporan": 0.99,
       "sumber": "laporan"
      },
      {
       "text": "Pasca banjir  muncul ular sepanjang 4 5 meter di Perumahan Binong Permai Blok B  Curug  Kabupaten Tangerang  Kamis (16/5/2019) pukul 01:00 WIB. https://t.co/0VAJUbXY8E",
       "waktu": "2019-05-15",
-      "skor": 0.023314,
+      "skor": 0.022872,
       "p_laporan": 0.895,
       "sumber": "laporan"
      }
     ]
    },
    {
-    "id": 5,
-    "jumlah": 165,
-    "pct_laporan": 37.0,
-    "kata_kunci": "bekas, angka, rumah, kota, hujan, warga, bantu, kab",
+    "id": 2,
+    "jumlah": 177,
+    "pct_laporan": 35.0,
+    "kata_kunci": "bekas, angka, rumah, hujan, kota, tidak, lt, pondok",
     "ringkasan": [
      {
       "text": "Banjir di wilayah Kelurahan Wanajaya Kecamatan Cibitung RW 07 Bekasi pada sore hari ini  Senin  18/5/20. https://t.co/ECFwkOiBoQ",
       "waktu": "2020-05-18",
-      "skor": 0.025408,
+      "skor": 0.024754,
       "p_laporan": 0.978,
-      "sumber": "laporan"
-     },
-     {
-      "text": "BPBD Kabupaten Bekasi pada Sabtu (25/2)  pukul 15.35 merilis data sebaran dampak banjir di Kabupaten Bekasi. Sebanyak 9 Kecamatan  20 Desa/Kelurahan di 43 titik di Kabupaten Bekasi terendam banjir berkisar 20 s.d 100 cm.  Dimana saja yang terdampak? Sila cek infografisnya ya.. https://t.co/xcwS74mZ3j",
-      "waktu": "2023-02-25",
-      "skor": 0.02207,
-      "p_laporan": 0.987,
       "sumber": "laporan"
      },
      {
       "text": "@RadioElshinta @petabencana  Banjir di Perumnas 1 Bekasi Barat dekat Masjid Al Muhajidin sudah 1 5 m dijalanan https://t.co/PNOR76AQrx",
       "waktu": "2020-01-01",
-      "skor": 0.021178,
+      "skor": 0.021539,
       "p_laporan": 0.687,
+      "sumber": "laporan"
+     },
+     {
+      "text": "BPBD Kabupaten Bekasi pada Sabtu (25/2)  pukul 15.35 merilis data sebaran dampak banjir di Kabupaten Bekasi. Sebanyak 9 Kecamatan  20 Desa/Kelurahan di 43 titik di Kabupaten Bekasi terendam banjir berkisar 20 s.d 100 cm.  Dimana saja yang terdampak? Sila cek infografisnya ya.. https://t.co/xcwS74mZ3j",
+      "waktu": "2023-02-25",
+      "skor": 0.021317,
+      "p_laporan": 0.987,
       "sumber": "laporan"
      }
     ]
    },
    {
-    "id": 6,
-    "jumlah": 510,
-    "pct_laporan": 32.7,
-    "kata_kunci": "angka, jalan, rt, rumah, tahun, banjirjakarta, hujan, hari",
+    "id": 5,
+    "jumlah": 562,
+    "pct_laporan": 31.3,
+    "kata_kunci": "angka, jalan, tidak, hujan, tahun, hari, rt, rumah",
     "ringkasan": [
-     {
-      "text": "Sebagian banjir sudah surut di Jakarta. Sebagian warga kembali ke rumahnya. Saat ini pengungsi 338 KK dan 1.317 Jiwa. Lokasi pengungsi berada berada di 10 titik lokasi  7 titik di wilayah Jakarta Timur   2 titik di wilayah Jakarta Selatan dan 1 titik di wilayah Jakarta Barat. https://t.co/OgC0ZDq9ta",
-      "waktu": "2019-04-27",
-      "skor": 0.014738,
-      "p_laporan": 0.994,
-      "sumber": "laporan"
-     },
      {
       "text": "Banjir Rendam Ratusan Rumah Warga di Pejaten Timur Jakarta Selatan  Tinggi Air 1 hingga 2 Meter https://t.co/eAt2VmooEJ https://t.co/x71XWbxKDq",
       "waktu": "2022-05-05",
-      "skor": 0.014716,
+      "skor": 0.014983,
       "p_laporan": 0.998,
       "sumber": "laporan"
      },
      {
       "text": "27 RT di DKI Jakarta Masih Terendam Banjir dengan Ketinggian Lebih dari 40 Cm   https://t.co/bkLGTDfZ2h  Bahagia warganya",
       "waktu": "2022-06-07",
-      "skor": 0.014651,
+      "skor": 0.014832,
       "p_laporan": 0.957,
+      "sumber": "laporan"
+     },
+     {
+      "text": "Sebagian banjir sudah surut di Jakarta. Sebagian warga kembali ke rumahnya. Saat ini pengungsi 338 KK dan 1.317 Jiwa. Lokasi pengungsi berada berada di 10 titik lokasi  7 titik di wilayah Jakarta Timur   2 titik di wilayah Jakarta Selatan dan 1 titik di wilayah Jakarta Barat. https://t.co/OgC0ZDq9ta",
+      "waktu": "2019-04-27",
+      "skor": 0.014581,
+      "p_laporan": 0.994,
       "sumber": "laporan"
      }
     ]
    },
    {
-    "id": 10,
-    "jumlah": 155,
-    "pct_laporan": 16.8,
-    "kata_kunci": "bogor, kirim, longsor, bandang, angka, bantu, bencana, hujan",
+    "id": 0,
+    "jumlah": 200,
+    "pct_laporan": 18.0,
+    "kata_kunci": "bogor, bantu, korban, longsor, bandang, angka, bencana, kirim",
     "ringkasan": [
      {
       "text": "FPI Kota Bogor bantu bersihkan sampah akibat banjir di Karawang  Rabu 17-02/2020 https://t.co/bDjQNMu1nb",
       "waktu": "2021-02-17",
-      "skor": 0.022318,
+      "skor": 0.027353,
       "p_laporan": 0.547,
       "sumber": "laporan"
      },
      {
       "text": "Hari Rabu (29/6)  Relawan gabungan Front Persaudaraan Islam (FPI) serta Relawan PA 212 masih berjibaku membersihkan lumpur sisa banjir di jalan-jalan dan pemukiman warga Kampung Cisarua  Desa Purasari  Kecamatan Leuwiliang.  Bogor. https://t.co/n6Gfhygvv4",
       "waktu": "2022-06-29",
-      "skor": 0.021396,
+      "skor": 0.022699,
       "p_laporan": 0.776,
       "sumber": "laporan"
      },
      {
-      "text": "Selamat malam teman2… Saat dalam perjalanan menuju ke lokasi bencana banjir bandang di Kec.Leuwiliang Bogor saya mendapatkan kabar dari keluarga adek bayi kembar ini bahwa kedua adek bayi ini sudah meninggal dunia sekitar jam 7 malam tadi…",
-      "waktu": "2022-06-24",
-      "skor": 0.021234,
-      "p_laporan": 0.602,
-      "sumber": "laporan"
-     }
-    ]
-   },
-   {
-    "id": 8,
-    "jumlah": 228,
-    "pct_laporan": 12.7,
-    "kata_kunci": "air, angka, mata, tanah, laut, masuk, genang, tidak",
-    "ringkasan": [
-     {
-      "text": "Bagi anak senja 1% air  99% kenangan  Bagi anak kimia 1% air  99% H2O  Bagi anak Jakarta 1% air  99% banjir 🥺",
-      "waktu": "2020-10-16",
-      "skor": 0.021992,
-      "p_laporan": 0.775,
-      "sumber": "laporan"
-     },
-     {
-      "text": "Banjir rob dikawasan Lodan  Ancol Jakarta Utara Tinggi air mencapai 60 cm  Semoga bisa cepat dikendalikan  @DKIJakarta @BPBDJakarta https://t.co/4WiVGBfMEL",
-      "waktu": "2020-06-04",
-      "skor": 0.017387,
-      "p_laporan": 0.917,
-      "sumber": "laporan"
-     },
-     {
-      "text": "@aniesbaswedan pak.. jakarta utara pintu air pelabuhan sunda kelapa banjir rob dri laut... sudah mencapai 1 meter ke jalan mohon di tinjau @DKIJakarta @NajwaShihab https://t.co/pXs7HyfK7h",
-      "waktu": "2020-06-04",
-      "skor": 0.0167,
-      "p_laporan": 0.726,
+      "text": "Ridwan Kamil Pastikan Penanganan Banjir Bandang di Bogor Berjalan Optimal .  KAB. BOGOR — Gub. Jabar @ridwankamil meninjau lokasi banjir bandang di Desa Purasari  Kec. Leuwiliang  Kab. Bogor  Minggu (26/6/2022).  Foto: Rizal FS/Biro Adpim Jabar Reporter: Dani/Biro Adpim Jabar https://t.co/uoRUVv4ces",
+      "waktu": "2022-06-27",
+      "skor": 0.02203,
+      "p_laporan": 0.676,
       "sumber": "laporan"
      }
     ]
    },
    {
     "id": 4,
-    "jumlah": 950,
-    "pct_laporan": 11.3,
-    "kata_kunci": "warga, sudah, hujan, buat, bukan, pak, jalan, apa",
+    "jumlah": 241,
+    "pct_laporan": 12.0,
+    "kata_kunci": "air, angka, mata, tidak, tanah, laut, bukan, genang",
     "ringkasan": [
      {
-      "text": "*Foto banjir di Tangerang disebar sebagai banjir di Jakarta*  Dalam hati netizen: Jangan komen Jangan komen Jangan komen Jangan komen Jangan komen Jangan komen Jangan komen Jangan komen Jangan komen Jangan ko-  Jempol netizen: Maaf  itu bionya tolong di-update jadi PENGECER HOAX. https://t.co/1NhffOsAhA",
-      "waktu": "2018-11-16",
-      "skor": 0.027204,
-      "p_laporan": 0.69,
+      "text": "Bagi anak senja 1% air  99% kenangan  Bagi anak kimia 1% air  99% H2O  Bagi anak Jakarta 1% air  99% banjir 🥺",
+      "waktu": "2020-10-16",
+      "skor": 0.021928,
+      "p_laporan": 0.775,
       "sumber": "laporan"
      },
      {
-      "text": "Imbas cicaheum banjir  macetnya sampe jl. Jakarta arah kota  yang mau jalan jalan urungkan niatnya @PRFMnews @infobdg @sekitarbandung_ https://t.co/hzRvHEeMGe",
-      "waktu": "2018-03-20",
-      "skor": 0.023298,
-      "p_laporan": 0.752,
+      "text": "Banjir rob dikawasan Lodan  Ancol Jakarta Utara Tinggi air mencapai 60 cm  Semoga bisa cepat dikendalikan  @DKIJakarta @BPBDJakarta https://t.co/4WiVGBfMEL",
+      "waktu": "2020-06-04",
+      "skor": 0.017629,
+      "p_laporan": 0.917,
       "sumber": "laporan"
      },
      {
-      "text": "Jalan raya depan Ciledug Indah 1 sudah mulai terendam banjir. Mohon dihindari jalan tersebut. https://t.co/49VLIxo4dL",
-      "waktu": "2022-09-10",
-      "skor": 0.02141,
-      "p_laporan": 0.719,
+      "text": "@aniesbaswedan pak.. jakarta utara pintu air pelabuhan sunda kelapa banjir rob dri laut... sudah mencapai 1 meter ke jalan mohon di tinjau @DKIJakarta @NajwaShihab https://t.co/pXs7HyfK7h",
+      "waktu": "2020-06-04",
+      "skor": 0.016576,
+      "p_laporan": 0.726,
       "sumber": "laporan"
      }
     ]
    },
    {
-    "id": 2,
-    "jumlah": 196,
-    "pct_laporan": 11.2,
-    "kata_kunci": "ciliwung, sungai, kali, angka, normalisasi, sodet, kurang, luap",
+    "id": 6,
+    "jumlah": 217,
+    "pct_laporan": 11.5,
+    "kata_kunci": "ciliwung, sungai, kali, angka, normalisasi, sodet, kanal, timur",
     "ringkasan": [
      {
       "text": "Kali Ciliwung meluap  22 RT terendam banjir di DKI Jakarta hingga 140 cm hari ini juga saya gak bersuara. Tanyain juga dong.",
       "waktu": "2022-06-01",
-      "skor": 0.027605,
+      "skor": 0.027373,
       "p_laporan": 0.963,
       "sumber": "laporan"
      },
      {
       "text": "Bendung Katulampa Siaga 1. Tinggi muka air 220 cm pada 25/4/2019 pukul 20.20 WIB. Waspadai banjir di bantaran sungai sekitar Sungai Ciliwung. https://t.co/BZgkreQEMX",
       "waktu": "2019-04-25",
-      "skor": 0.025563,
+      "skor": 0.026374,
       "p_laporan": 0.825,
       "sumber": "laporan"
      },
      {
-      "text": "Sungai Ciliwung Meluap  Kebon Pala Terendam Banjir Hingga 1 Meter - Metro https://t.co/goyZM0D4uq  https://t.co/sgxaPrLxHp",
-      "waktu": "2020-03-27",
-      "skor": 0.024589,
-      "p_laporan": 0.949,
-      "sumber": "laporan"
-     }
-    ]
-   },
-   {
-    "id": 3,
-    "jumlah": 366,
-    "pct_laporan": 4.1,
-    "kata_kunci": "tidak, angka, hujan, sudah, warga, kerja, macet, sama",
-    "ringkasan": [
-     {
-      "text": "Depok tidak hujan  tapi mampang prapatan Depok banjir  lalin macet dari 4 arah https://t.co/PmgsmsJVQt",
-      "waktu": "2023-06-19",
-      "skor": 0.021922,
-      "p_laporan": 0.951,
-      "sumber": "laporan"
-     },
-     {
-      "text": "Banjir gak penting  rumah warga tenggelam juga gak penting. Yg penting Formula E dan proyek bagi2 kue. Ye kan  @aniesbaswedan ?  Waspada Banjir Besar  46 RW di Jakarta Sudah Terendam  https://t.co/y051guBkUn",
-      "waktu": "2020-02-20",
-      "skor": 0.01961,
-      "p_laporan": 0.567,
-      "sumber": "laporan"
-     },
-     {
-      "text": "Tidak sampai 2 tahun  Jakarta sudah hancur. • Premanisme merajalela  • Macet makin parah  • Banjir tidak surut-surut. • Polusi malah makin sadis. • TIM mau dihancurkan demi memuaskan pengembang hotel.  Sedih dan merana  wahai JKT58.  https://t.co/Ajrz5uuvgN",
-      "waktu": "2019-11-27",
-      "skor": 0.019606,
-      "p_laporan": 0.562,
+      "text": "BREAKING NEWS: Kali Ciliwung Meluap  Banjir hingga 1 Meter Landa Kampung Melayu Jakarta Timur https://t.co/cInliaFdxI",
+      "waktu": "2023-11-30",
+      "skor": 0.024882,
+      "p_laporan": 0.86,
       "sumber": "laporan"
      }
     ]
    },
    {
     "id": 1,
-    "jumlah": 191,
-    "pct_laporan": 1.0,
-    "kata_kunci": "gubernur, tidak, angka, hari, soal, malah, bukan, sudah",
+    "jumlah": 1190,
+    "pct_laporan": 8.1,
+    "kata_kunci": "tidak, gubernur, hujan, sudah, warga, pak, bukan, kota",
     "ringkasan": [
      {
-      "text": "Tak perlu waktu 5 tahun bagi Pj Gubernur DKI Jakarta; Heru Budi Hartono untuk membenahi Jakarta dari “banjir dan macet” tapi cukup 2 tahun saja  sampai tahun 2024.  INI SOAL NIAT DAN KESERIUSAN KERJA BUKAN SOAL PANDAI BICARA ! https://t.co/1FZgfFRxjl",
-      "waktu": "2022-10-12",
-      "skor": 0.012125,
-      "p_laporan": 0.005,
-      "sumber": "semua"
+      "text": "*Foto banjir di Tangerang disebar sebagai banjir di Jakarta*  Dalam hati netizen: Jangan komen Jangan komen Jangan komen Jangan komen Jangan komen Jangan komen Jangan komen Jangan komen Jangan komen Jangan ko-  Jempol netizen: Maaf  itu bionya tolong di-update jadi PENGECER HOAX. https://t.co/1NhffOsAhA",
+      "waktu": "2018-11-16",
+      "skor": 0.030739,
+      "p_laporan": 0.69,
+      "sumber": "laporan"
      },
      {
-      "text": "@KangSemproel Lha  2013 banjir di Jakarta mengakibatkan 41 orang tewas  tapi gubernurnya bukan mundur  malah maju jadi capres... 🤔 https://t.co/X4jggZHvVp",
-      "waktu": "2021-12-10",
-      "skor": 0.011715,
-      "p_laporan": 0.106,
-      "sumber": "semua"
+      "text": "Imbas cicaheum banjir  macetnya sampe jl. Jakarta arah kota  yang mau jalan jalan urungkan niatnya @PRFMnews @infobdg @sekitarbandung_ https://t.co/hzRvHEeMGe",
+      "waktu": "2018-03-20",
+      "skor": 0.022948,
+      "p_laporan": 0.752,
+      "sumber": "laporan"
      },
      {
-      "text": "Sumber permasalahan di DKI bukan banjir  bukan kemacetan dan bukan juga Covid-19. Tp sumber permasalahannya adl Anies  krn dia selaku Gubernur tdk becus mengurus daerahnya. Coba saja kalo dia becus  pasti semua persoalan yg ada di DKI bisa diselesaikan.  #4niesDanCovidBerbahaya https://t.co/UrqTZGaD3s",
-      "waktu": "2020-09-11",
-      "skor": 0.011694,
-      "p_laporan": 0.008,
-      "sumber": "semua"
-     }
-    ]
-   },
-   {
-    "id": 0,
-    "jumlah": 315,
-    "pct_laporan": 0.6,
-    "kata_kunci": "anies, baswedan, angka, kerja, pak, tidak, salah, tangan",
-    "ringkasan": [
-     {
-      "text": "Jakarta banjir  Kadrun nyalahin pak Heru yang baru kerja 20 hari  Anies Baswedan 5 tahun ngapain aja..?? 😴",
-      "waktu": "2022-11-05",
-      "skor": 0.014562,
-      "p_laporan": 0.025,
-      "sumber": "semua"
-     },
-     {
-      "text": "Survey mengatakan  74 9 persen warga Jakarta Puas dengan kinerja Anies Tangani Banjir. https://t.co/n47KTQ565p",
-      "waktu": "2022-07-26",
-      "skor": 0.014444,
-      "p_laporan": 0.114,
-      "sumber": "semua"
-     },
-     {
-      "text": "Anies Pastikan Duit DKI Fokus di Covid-19 dan Pengendalian Banjir  “Tidak ada pembangunan infrastruktur baru ” kata Anies dalam keterangannya  Sabtu (4/7/2020)  https://t.co/zbXOzSublY",
-      "waktu": "2020-07-05",
-      "skor": 0.014228,
-      "p_laporan": 0.05,
-      "sumber": "semua"
+      "text": "@RadioElshinta hujan deras sebabkan banjir setinggi dengkul orang dewasa depan Seskoal  Jakarta Selatan. @aniesbaswedan https://t.co/zdCpsel9JP",
+      "waktu": "2019-06-08",
+      "skor": 0.021534,
+      "p_laporan": 0.966,
+      "sumber": "laporan"
      }
     ]
    },
    {
     "id": 7,
-    "jumlah": 173,
-    "pct_laporan": 0.0,
-    "kata_kunci": "presiden, atas, mudah, jokowi, macet, bendung, lebih, ciawi",
+    "jumlah": 205,
+    "pct_laporan": 2.9,
+    "kata_kunci": "macet, presiden, atas, mudah, tidak, lebih, jokowi, janji",
     "ringkasan": [
-     {
-      "text": "Bendungan kering pengendali Banjir Jakarta.  Bendungan Sukamahi yang direncanakan 1990-an  mulai dibangun pada masa Jokowi di 2017.  Saat ini Progres pembangunan Bendungan Sukamahi telah mencapai 60% &amp; Bendungan Ciawi 73% ditargetkan rampung pada 2021.  https://t.co/IptVwha3Je https://t.co/an4Mx3IF8u",
-      "waktu": "2020-12-08",
-      "skor": 0.024166,
-      "p_laporan": 0.01,
-      "sumber": "semua"
-     },
      {
       "text": "Walikota Solo  Joko Widodo: “Kelihatannya nggak sulit-sulit amat atasi macet dan banjir Jakarta.” (Solo  28/06/2011) https://t.co/urTlATW1q1",
       "waktu": "2018-07-05",
-      "skor": 0.022615,
+      "skor": 0.020221,
       "p_laporan": 0.12,
       "sumber": "semua"
      },
      {
       "text": "Solusi 3 Pejabat Negara utk atasi Macet &amp; Banjir👇  Walikota Solo: Kelihatannya gak sulit2 amat atasi Macet &amp; Banjir Jakarta  Gubernur DKI: Macet &amp; Banjir lebih mudah diatasi jika jadi Presiden  Presiden: Untuk mengatasi Macet &amp; Banjir Ibukota Indonesia kita Pindah Aja !!  🤦‍♂️🤦‍♂️🤦‍♂️ https://t.co/yfdospDSi9",
       "waktu": "2019-09-16",
-      "skor": 0.021361,
+      "skor": 0.020008,
       "p_laporan": 0.01,
+      "sumber": "semua"
+     },
+     {
+      "text": "Pada akhir jabatannya Anies dipertanyakan janji kampanyenya oleh warga DKI yang tidak mampu ia tunaikan. Seperti janji tidak menggusur  janji kesejahteraan  janji atasi banjir dan janji janji janji janji janji janji lainnya yang tidak ditepati. https://t.co/5eEWlCGg5m",
+      "waktu": "2022-10-14",
+      "skor": 0.019964,
+      "p_laporan": 0.011,
+      "sumber": "semua"
+     }
+    ]
+   },
+   {
+    "id": 8,
+    "jumlah": 63,
+    "pct_laporan": 1.6,
+    "kata_kunci": "resap, sumur, buat, angka, bangun, cegah, anies, tidak",
+    "ringkasan": [
+     {
+      "text": "Gubernur Jakarta berdasar RPJMD 2017-2022 untuk penanganan banjir menargetkan pembuatan sumur resapan 1 8 juta sumur. Berdasar data ini Per Feb 2021 sudah selesai 1 79 juta sumur (99 78%). Artinya masih kurang 3.964 sumur (0 22 %) lagi. Ayo Semangat #MajuKotanyaBahagiaWarganya https://t.co/45RoALDIeT",
+      "waktu": "2021-03-06",
+      "skor": 0.021432,
+      "p_laporan": 0.129,
+      "sumber": "semua"
+     },
+     {
+      "text": "Ide nama² jalan utk DKI skrg ini : - Jln Nenek Hindun - Jln Kelebihan bayar - Jln Sumur Resapan - Jln Parkir Aer - Jln KTP Administrasi - Jln Ayat - Jln Mayat - Jln Tugu Kenthu - Jln Peti Mati - Jln Toa Banjir - Jln Intoleran Ada ide lain tweeps? 😁😁😆",
+      "waktu": "2022-06-28",
+      "skor": 0.016074,
+      "p_laporan": 0.29,
+      "sumber": "semua"
+     },
+     {
+      "text": "Yuk ikut. Berkolaborasi bersama @DKIJakarta mencegah banjir.   1/ Menabung air hujan: resapkan air ke dlm tanah via sumur resapan/biopori dll.  2/ Memanen air hujan: tampung air hujan utk keperluan sehari2.  3/ Mengalirkan air hujan: pastikan saluran &amp; got bebas sampah &amp; lumpur. https://t.co/jg526DDHYa",
+      "waktu": "2021-04-27",
+      "skor": 0.015945,
+      "p_laporan": 0.023,
+      "sumber": "semua"
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "jumlah": 343,
+    "pct_laporan": 0.6,
+    "kata_kunci": "anies, angka, baswedan, tidak, kerja, gubernur, pak, tangan",
+    "ringkasan": [
+     {
+      "text": "Jakarta banjir  Kadrun nyalahin pak Heru yang baru kerja 20 hari  Anies Baswedan 5 tahun ngapain aja..?? 😴",
+      "waktu": "2022-11-05",
+      "skor": 0.013899,
+      "p_laporan": 0.025,
+      "sumber": "semua"
+     },
+     {
+      "text": "Pak Gubernur Anies Baswedan sudah sampai mana kibulan anda soal solusi banjir? Mentok dikata-kata aja ya pak?   Bekerjalah walau tidak berguna bagi warga Jakarta. https://t.co/DwvEfyl4Rl",
+      "waktu": "2021-10-26",
+      "skor": 0.013774,
+      "p_laporan": 0.006,
+      "sumber": "semua"
+     },
+     {
+      "text": "Anies Pastikan Duit DKI Fokus di Covid-19 dan Pengendalian Banjir  “Tidak ada pembangunan infrastruktur baru ” kata Anies dalam keterangannya  Sabtu (4/7/2020)  https://t.co/zbXOzSublY",
+      "waktu": "2020-07-05",
+      "skor": 0.013697,
+      "p_laporan": 0.05,
+      "sumber": "semua"
+     }
+    ]
+   },
+   {
+    "id": 9,
+    "jumlah": 52,
+    "pct_laporan": 0.0,
+    "kata_kunci": "bendung, ciawi, sukamahi, rampung, kendali, bangun, jokowi, juli",
+    "ringkasan": [
+     {
+      "text": "Kontrol banjir Jakarta  Bendungan Ciawi dan Sukamahi rampung 2021  Pembangunan Bendungan Sukamahi sdh direncanakan sejak thn 1990-an  mulai dibangun thn 2017. Sdgkan progres lahan yg sdh bebas tlh mencapai 40 86ha atau 92 67% dr kebutuhan 46 7ha.   Jokowi gaspol infrastruktur https://t.co/zJZlfXr9v9",
+      "waktu": "2020-12-09",
+      "skor": 0.023396,
+      "p_laporan": 0.015,
+      "sumber": "semua"
+     },
+     {
+      "text": "Sejak 1990  Bendungan kering pengendali banjir Sukamahi dan Ciawi ini tetap saja jadi wacana dan banjir tetap jadi bencana di Jakarta.  Pada masa Jokowilah pembangunannya direalisasikan di 2017.  Saat ini Progres Sukamahi 60%  sementara Ciawi 73%.  https://t.co/fAlT7uXjvF https://t.co/7xgqw60ETG",
+      "waktu": "2020-12-09",
+      "skor": 0.020803,
+      "p_laporan": 0.014,
+      "sumber": "semua"
+     },
+     {
+      "text": "Utk mengendalikan banjir Jakarta  pembangunan bendungan Ciawi ditargetkan rampung Juli 2021... https://t.co/mIyfUaGHl2",
+      "waktu": "2021-05-10",
+      "skor": 0.019875,
+      "p_laporan": 0.053,
       "sumber": "semua"
      }
     ]
