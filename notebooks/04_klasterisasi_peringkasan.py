@@ -392,6 +392,35 @@ else:
     plt.tight_layout(); plt.savefig(FIG / "04_rouge.png", dpi=150); plt.show()
 
 # %% [markdown]
+# ### Apakah selisihnya bermakna? Uji berpasangan per set
+# Rata-rata ROUGE bisa berbeda karena kebetulan. Skor setiap set dirata-rata atas kedua acuan, lalu Hybrid TF-IDF dibandingkan
+# dengan tiap baseline **pada set yang sama** memakai uji **Wilcoxon signed-rank** (non-parametrik, cocok untuk 10 pasangan).
+# p < 0,05 berarti selisihnya kecil kemungkinannya terjadi karena kebetulan.
+
+# %%
+if any(acuan.values()):
+    from scipy.stats import wilcoxon
+    per_set = evaluasi.groupby(["set_id", "metode"])[["R1", "R2", "RL"]].mean().unstack("metode")
+    uji = []
+    for pembanding in ["Acak (rata-rata 20×)", "TF-IDF standar"]:
+        for m in ["R1", "R2", "RL"]:
+            h, b = per_set[(m, "Hybrid TF-IDF")], per_set[(m, pembanding)]
+            uji.append(dict(pembanding=pembanding, metrik=m, unggul=f"{(h > b).sum()}/{len(h)} set",
+                            selisih_rata2=round(float((h - b).mean()), 4), p_wilcoxon=round(float(wilcoxon(h, b).pvalue), 3)))
+    uji = pd.DataFrame(uji)
+    display(per_set.xs("R1", axis=1, level=0).round(3))
+    display(uji)
+    print("Signifikan (p < 0,05):", uji[uji.p_wilcoxon < 0.05][["pembanding", "metrik"]].values.tolist() or "tidak ada")
+
+# %% [markdown]
+# **Interpretasi** (dibahas di laporan BAB IV):
+# - Dua manusia pun hanya sebagian sepakat (lihat kesepakatan antar-anotator), sehingga skor ROUGE sistem perlu dibandingkan
+#   dengan angka itu, bukan dengan 1,0.
+# - Set evaluasi diambil dari satu klaster yang topiknya seragam, sehingga tweet acak pun sudah cukup mewakili topik. Ringkasan
+#   acuan ditulis dengan kata sendiri (abstraktif), sedangkan sistem memilih tweet utuh (ekstraktif).
+# - Dengan hanya 10 set, daya uji statistik kecil; selisih kecil tidak akan terdeteksi signifikan.
+
+# %% [markdown]
 # ## 8. Ekspor untuk web dan simpan ke Supabase
 
 # %%
