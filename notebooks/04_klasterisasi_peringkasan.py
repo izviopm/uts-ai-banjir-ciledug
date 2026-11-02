@@ -29,6 +29,8 @@ if "google.colab" in sys.modules:
     if not Path("/content/repo").exists():
         subprocess.run(["git", "clone", "-q", "https://github.com/izviopm/uts-ai-banjir-ciledug.git", "/content/repo"], check=True)
     os.chdir("/content/repo")
+    # buang output run sebelumnya agar acuan (JSON & label) selalu versi repo, bukan hasil Colab yang lalu
+    subprocess.run("git fetch -q && git reset -q --hard origin/main", shell=True, check=True)
     from importlib.metadata import version, PackageNotFoundError
     def cocok(baris):
         nama, ver = baris.split("==")
