@@ -1,6 +1,7 @@
 # Lembar Ringkasan Acuan — Fatah
 
 **Instruksi** (baca dulu):
+
 1. Kerjakan **sendiri**, jangan melihat lembar anggota lain, dan **jangan memakai AI** (ChatGPT, Gemini, dsb.).
 2. Untuk setiap set, baca ke-25 tweet, lalu tulis ringkasan **2–3 kalimat (±40–60 kata)** dengan kata-katamu sendiri:
    apa yang terjadi, di mana, dan dampak/hal penting yang paling sering disebut.
@@ -37,6 +38,8 @@
 
 RINGKASAN:
 
+Hujan deras bikin banyak jalan di Tangerang dan sekitarnya terendam, antara lain Jl. Raya Ciledug dekat SMA Yadika (airnya sampai jok motor), Cisauk, Taman Cibodas, Ciputat, tol Bintaro-Serpong, dan Tigaraksa-Cisoka. Motor dan mobil banyak yang mogok, lalu lintas jadi macet. Ada juga kabar banjir bandang di Bogor yang memakan korban jiwa.
+
 ---
 
 ## S02
@@ -68,6 +71,8 @@ RINGKASAN:
 25. Banjir beberapa hari ini di DKI warisan peninggalan gabener @aniesbaswedan yg ga pernah kerja..Jakarta sengaja dibikin rusak banjir &amp; macet Ga usah bnyk nomong yg teknis aja" -Fahri Hamzah..."Anies busyettt" -Prof Tjipta Lesmana
 
 RINGKASAN:
+
+Hampir semua tweet di set ini cuma saling serang soal gubernur Jakarta dan siapa yang salah, jadi isi banjirnya tipis. Yang sempat disebut: sumur resapan dianggap tidak efektif, anggaran penanganan banjir yang dipertanyakan, dan kereta api yang terhambat. Tidak ada yang membahas Ciledug atau Tangerang.
 
 ---
 
@@ -101,6 +106,8 @@ RINGKASAN:
 
 RINGKASAN:
 
+Banjir di Jakarta Utara sering datang dari rob dan penurunan muka tanah akibat air tanah disedot berlebihan. Pemerintah menyiapkan pompa, waduk, dan aplikasi pantau banjir. Dari Tangerang, Kali Sabi meluap sampai air masuk ke rumah warga di Perumahan Taman Cibodas, dan warga jadi waswas kalau naik lagi.
+
 ---
 
 ## S04
@@ -132,6 +139,8 @@ RINGKASAN:
 25. Selamat Natal selamat bersuka cita. Apa permintaanmu di Hari Natal ini? Kalau saya sederhana: semoga Jakarta tak banjir #magnaindonesia #SelamatNatalSobatNKRI #MerryChristmas2019
 
 RINGKASAN:
+
+Set ini campur aduk dan banyak yang tidak nyambung, jadi tema paling jelas cuma peringatan hujan dan banjir Jakarta yang katanya cepat surut. BMKG minta siaga banjir sampai Jawa Barat dan Jawa Tengah. Dari sekitar Ciledug, hujan lebat sudah bikin kawasan Ciledug Indah mulai tergenang.
 
 ---
 
@@ -165,6 +174,8 @@ RINGKASAN:
 
 RINGKASAN:
 
+Kebanyakan tweet berisi adu argumen soal kinerja gubernur Jakarta, jadi bagian banjirnya sedikit: gugatan warga korban banjir awal 2020, klaim banjir surut dalam 6 jam, sumur resapan, dan rob. Ada satu judul soal banjir Tangerang, tapi tanpa detail lokasi atau dampaknya.
+
 ---
 
 ## S06
@@ -196,6 +207,8 @@ RINGKASAN:
 25. @kangmeirza @aniesbaswedan @P3nj3l4j4h @MurtadhaOne @JajangRidwan19 @RizmaWidiono @YRadianto @triwul82 @heniunique Saya bangga ada Gubernur @aniesbaswedan @DKIJakarta yang bisa mengatasi banjir 👍 sudah seiman dengan warganya skg dikasih wahana berenang gratis. Selamat bang @pandji atas pilihannya. #BikinMalu aja
 
 RINGKASAN:
+
+Isinya didominasi sindiran soal janji pejabat bahwa banjir Jakarta lebih gampang diatasi kalau jadi presiden, jadi susah diambil kejadiannya. Yang konkret: sodetan Ciliwung diresmikan 2023, biopori disebut sebagai solusi, penanganan dianggap harus dari hulu sampai hilir, dan ada keluhan macet plus banjir di Puri Beta, Ciledug.
 
 ---
 
@@ -229,6 +242,8 @@ RINGKASAN:
 
 RINGKASAN:
 
+Tweet-tweetnya beragam. Intinya ada 129 kelurahan di Jakarta yang terancam banjir, beberapa RT terendam, sekitar 6.500 warga dipindahkan, dan pemerintah menyiapkan sumur resapan serta portal Pantau Banjir. Penurunan tanah juga sempat dibahas. Tidak ada kejadian dari Ciledug atau Tangerang, hanya iklan rumah bebas banjir yang dilewati.
+
 ---
 
 ## S08
@@ -260,6 +275,8 @@ RINGKASAN:
 25. kemang raya dan sekitarnya. 17.35 wib. hujan. jakarta. banjir.
 
 RINGKASAN:
+
+Hujan deras berkali-kali bikin banjir di Tangerang, Tangsel, Depok, Bogor, dan Jakarta. Di Tangerang, Cisauk macet parah dan tergenang sampai ada warga bikin petisi, Bus TransTangerang terjebak di Cikokol, dan air masuk ke area masjid serta puskesmas di Serpong. Pemprov DKI juga menyarankan WFH saat cuaca ekstrem.
 
 ---
 
@@ -293,6 +310,8 @@ RINGKASAN:
 
 RINGKASAN:
 
+Set ini hampir semuanya soal Bekasi: banjir di PGP Jatiasih sampai 6 meter, Jl. Sudirman Bekasi Barat 30-50 cm, dan sembilan kecamatan di Kabupaten Bekasi terendam. Banyak yang gotong royong bersihkan lumpur dan menyalurkan bantuan, ada juga kritik soal izin pembangunan. Tidak ada tweet dari Ciledug atau Tangerang.
+
 ---
 
 ## S10
@@ -324,5 +343,7 @@ RINGKASAN:
 25. Jadi Biang Kerok Banjir di Kramat Jati Kali Induk Akan Dinormalisasi - Suara Jakarta
 
 RINGKASAN:
+
+Pokok bahasannya Sungai Ciliwung: perdebatan normalisasi lawan naturalisasi, kelanjutan sodetan Ciliwung, pembebasan lahan bantaran, dan 3.000 ton sampah yang diangkut. Banyak tweet saling lempar soal siapa yang kerja. Tidak ada kejadian dari Ciledug atau Tangerang, hanya banjir bandang Cidurian di Bogor.
 
 ---
