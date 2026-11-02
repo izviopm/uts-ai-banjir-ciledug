@@ -70,6 +70,7 @@ df["text_clean"] = df.text_raw.map(teks.preprocess)
 df = df.drop_duplicates("text_clean")
 df = df[df.text_clean.str.split().str.len() >= 3].reset_index(drop=True)
 print(f"Jabodetabek: {n0} → tanpa Melayu/Inggris: {n1} → unik & ≥3 kata: {len(df)}")
+df[["waktu", "text_raw", "text_clean"]].to_json("data/processed/korpus_jabodetabek.json", orient="records", force_ascii=False, indent=0)
 df[["waktu", "text_raw", "text_clean"]].sample(5, random_state=SEED)
 
 # %% [markdown]
@@ -119,11 +120,11 @@ print(f"Kosakata: {X_tfidf.shape[1]} kata · LSA 100 dimensi menjelaskan {var:.1
 # | **Davies-Bouldin** | Rasio sebaran dalam klaster terhadap jarak antar klaster | rendah |
 # | **Calinski-Harabasz** | Rasio variansi antar klaster terhadap dalam klaster | tinggi |
 #
-# *k* dicari pada rentang 3–12. Batas bawah 3 dipakai karena 2 klaster terlalu kasar untuk laporan situasi.
+# *k* dicari pada rentang 3–20. Batas bawah 3 dipakai karena 2 klaster terlalu kasar untuk laporan situasi.
 
 # %%
 hasil_k = []
-for k in range(3, 13):
+for k in range(3, 21):
     for nama, model in [("K-Means", KMeans(n_clusters=k, n_init=10, random_state=SEED)),
                         ("Agglomerative", AgglomerativeClustering(n_clusters=k, linkage="ward"))]:
         lab = model.fit_predict(X)
@@ -142,13 +143,43 @@ ax[0].set_title("Silhouette (↑)"); ax[1].set_title("Davies-Bouldin (↓)"); ax
 for a in ax: a.set_xlabel("k")
 ax[0].legend(); plt.tight_layout(); plt.savefig(FIG / "04_pemilihan_k.png", dpi=150); plt.show()
 
-terbaik = hasil_k.loc[hasil_k.groupby("algoritma").silhouette.idxmax()].set_index("algoritma")
-terbaik.round(4)
+pivot = hasil_k.pivot(index="k", columns="algoritma", values="silhouette")
+pivot.round(4)
+
+# %% [markdown]
+# **Memilih algoritma dan *k*:**
+# - **Algoritma**: dibandingkan pada *k* yang sama, algoritma dengan silhouette lebih tinggi di sebagian besar *k* dipilih.
+# - ***k***: silhouette pada teks pendek cenderung **terus naik seiring bertambahnya k** (setiap klaster makin kecil dan spesifik),
+#   sehingga "silhouette tertinggi" selalu menunjuk batas atas rentang dan tidak bisa dipakai memilih *k*. Karena itu *k* dipilih dengan
+#   **metode elbow** (algoritma *kneedle*): titik pada kurva inertia yang jaraknya paling jauh dari garis lurus antara ujung-ujung kurva,
+#   yaitu titik di mana menambah klaster tidak lagi menurunkan inertia secara berarti.
+# - Nilai silhouette yang kecil (< 0,1) menunjukkan **batas antar topik tweet tidak tegas**. Ini wajar untuk tweet yang pendek dan
+#   bertopik campur, dan dibahas sebagai keterbatasan.
 
 # %%
-ALGO = terbaik.silhouette.idxmax()
-K = int(terbaik.loc[ALGO, "k"])
-print(f"Dipilih: {ALGO} dengan k = {K} (silhouette tertinggi)")
+menang = (pivot["K-Means"] > pivot["Agglomerative"]).mean()
+ALGO = "K-Means" if menang >= 0.5 else "Agglomerative"
+print(f"K-Means unggul silhouette pada {menang:.0%} nilai k → algoritma dipilih: {ALGO}")
+
+def kneedle(x, y):
+    """Titik siku kurva menurun: jarak terbesar antara kurva ternormalisasi dan garis lurus dari ujung ke ujung."""
+    x, y = np.asarray(x, float), np.asarray(y, float)
+    xn, yn = (x - x[0]) / (x[-1] - x[0]), (y - y.min()) / (y.max() - y.min())
+    garis = yn[0] + (yn[-1] - yn[0]) * xn
+    return int(x[np.argmax(garis - yn)])
+
+km = hasil_k[hasil_k.algoritma == "K-Means"].sort_values("k")
+K = kneedle(km.k, km.inertia)
+assert kneedle([1, 2, 3, 4, 5], [100, 40, 20, 15, 12]) == 2
+print(f"k terpilih (elbow/kneedle) = {K}")
+
+fig, ax = plt.subplots(figsize=(7, 3.5))
+ax.plot(km.k, km.inertia, marker="o"); ax.axvline(K, ls="--", color="gray", label=f"elbow k = {K}")
+ax.set_xlabel("k"); ax.set_ylabel("inertia"); ax.set_title("Metode elbow K-Means"); ax.legend()
+plt.tight_layout(); plt.savefig(FIG / "04_elbow.png", dpi=150); plt.show()
+hasil_k[(hasil_k.k == K)].set_index("algoritma").round(4)
+
+# %%
 model = KMeans(n_clusters=K, n_init=10, random_state=SEED) if ALGO == "K-Means" else AgglomerativeClustering(n_clusters=K, linkage="ward")
 df["klaster"] = model.fit_predict(X)
 
@@ -232,16 +263,23 @@ def tanpa_url(t):
 
 # %% [markdown]
 # ### Ringkasan setiap klaster (laporan situasi agen)
+# Hybrid TF-IDF tidak membedakan laporan dari opini atau iklan. Karena itu agen hanya meringkas tweet yang diprediksi
+# **laporan** oleh Naive Bayes (alur agen: klasifikasi → klasterisasi → peringkasan), bila klaster punya ≥ 10 tweet laporan.
+# Klaster opini/politik yang laporannya sedikit diringkas dari semua tweet-nya. Evaluasi ROUGE di bagian 7 tetap memakai
+# Hybrid TF-IDF murni pada set yang sama untuk semua metode, agar perbandingannya adil.
 
 # %%
+MIN_LAPORAN = 10
 ringkasan = {}
 for c in profil.klaster:
-    sub = df[df.klaster == c].reset_index(drop=True)
+    sub = df[df.klaster == c]
+    sumber = "laporan" if sub.laporan.sum() >= MIN_LAPORAN else "semua"
+    sub = (sub[sub.laporan] if sumber == "laporan" else sub).reset_index(drop=True)
     pilih, skor = hybrid_tfidf(sub.text_clean.tolist(), n=3)
     ringkasan[int(c)] = [dict(text=sub.text_raw[i], waktu=str(sub.waktu[i].date()), skor=round(float(skor[i]), 6),
-                              p_laporan=round(float(sub.p_laporan[i]), 3)) for i in pilih]
+                              p_laporan=round(float(sub.p_laporan[i]), 3), sumber=sumber) for i in pilih]
     pr = profil.set_index("klaster").loc[c]
-    print(f"\n■ Klaster {c} — {pr.jumlah} tweet, {pr.pct_laporan}% laporan | {pr.kata_kunci}")
+    print(f"\n■ Klaster {c} — {pr.jumlah} tweet, {pr.pct_laporan}% laporan | {pr.kata_kunci} | diringkas dari: {sumber} ({len(sub)})")
     for r in ringkasan[int(c)]:
         print(f"   • [{r['waktu']}] {tanpa_url(r['text'])[:170]}")
 
@@ -256,16 +294,24 @@ for c in profil.klaster:
 
 # %%
 N_SET, UKURAN_SET = 10, 25
-rng = np.random.default_rng(SEED)
-urut = profil.sort_values("jumlah", ascending=False).klaster.tolist()
-alokasi = Counter(urut[i % len(urut)] for i in range(N_SET))  # klaster besar bisa dapat 2 set
-set_eval = []
-for c, n in sorted(alokasi.items()):
-    idx = df.index[df.klaster == c].to_numpy()
-    for j in range(n):
-        ambil = rng.choice(idx, size=min(UKURAN_SET, len(idx)), replace=False)
-        set_eval.append(dict(set_id=f"S{len(set_eval) + 1:02d}", klaster=int(c), idx=[int(i) for i in ambil]))
-print(f"{len(set_eval)} set evaluasi:", {s['set_id']: s['klaster'] for s in set_eval})
+SET_FILE = REF / "set_evaluasi.json"
+posisi = {t: i for i, t in enumerate(df.text_raw)}
+if SET_FILE.exists():
+    # Set dikunci sejak pertama dibuat: lembar acuan yang sudah diisi tetap cocok walau klasterisasi diubah
+    set_eval = [dict(s, idx=[posisi[t] for t in s["tweets"]]) for s in json.loads(SET_FILE.read_text(encoding="utf8"))]
+else:
+    rng = np.random.default_rng(SEED)
+    urut = profil.sort_values("jumlah", ascending=False).klaster.tolist()
+    alokasi = Counter(urut[i % len(urut)] for i in range(N_SET))  # klaster besar bisa dapat 2 set
+    set_eval = []
+    for c, n in sorted(alokasi.items()):
+        idx = df.index[df.klaster == c].to_numpy()
+        for j in range(n):
+            ambil = rng.choice(idx, size=min(UKURAN_SET, len(idx)), replace=False)
+            set_eval.append(dict(set_id=f"S{len(set_eval) + 1:02d}", klaster=int(c), idx=[int(i) for i in ambil]))
+    SET_FILE.write_text(json.dumps([dict(set_id=s["set_id"], klaster_asal=s["klaster"], tweets=[df.text_raw[i] for i in s["idx"]])
+                                    for s in set_eval], ensure_ascii=False, indent=1), encoding="utf8")
+print(f"{len(set_eval)} set evaluasi:", [s["set_id"] for s in set_eval])
 
 def tulis_lembar(path, penulis):
     baris = [f"# Lembar Ringkasan Acuan — {penulis}", "",
