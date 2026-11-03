@@ -2,6 +2,10 @@
 
 Proyek UTS Kecerdasan Artifisial (Pertemuan 1–7), Universitas Budi Luhur.
 
+**Demo web:** https://banjir-cileduk.vercel.app
+
+**Repositori GitHub:** https://github.com/izviopm/uts-ai-banjir-ciledug
+
 **Ide:** agen yang membaca tweet tentang banjir, menentukan apakah tweet itu laporan kejadian banjir nyata (NLP + supervised learning), mengelompokkan dan meringkas tweet per topik dengan Hybrid TF-IDF, lalu mencari rute evakuasi di Ciledug dengan A*: dari titik banjir ke tempat aman terdekat, dengan menghindari ruas jalan yang tergenang.
 
 > Penjelasan lengkap untuk pembaca awam (alur, letak dataset, hasil, keterbatasan, cara menjalankan web): **[PANDUAN_PROYEK.md](docs/PANDUAN_PROYEK.md)**

@@ -346,6 +346,9 @@ const belakang = [
   p("Seluruh kode, data, dan hasil tersedia di repositori GitHub berikut:", { tanpaIndent: true }),
   new Paragraph({ children: [new ExternalHyperlink({ link: "https://github.com/izviopm/uts-ai-banjir-ciledug",
     children: [new TextRun({ text: "https://github.com/izviopm/uts-ai-banjir-ciledug", style: "Hyperlink", font: FONT })] })], spacing: { after: 160 } }),
+  p("Aplikasi web demo (klasifikasi, klaster dan ringkasan, rute evakuasi) dapat dicoba di:", { tanpaIndent: true }),
+  new Paragraph({ children: [new ExternalHyperlink({ link: "https://banjir-cileduk.vercel.app",
+    children: [new TextRun({ text: "https://banjir-cileduk.vercel.app", style: "Hyperlink", font: FONT })] })], spacing: { after: 160 } }),
   ...tabel("Isi repositori", ["Berkas", "Isi"], [
     ["notebooks/01_eda_preprocessing.ipynb", "EDA, label tingkat tweet, penyaringan bahasa Melayu, pra-pemrosesan, pembagian data"],
     ["notebooks/02_klasifikasi.ipynb", "Naive Bayes, KNN, Decision Tree; GridSearchCV; evaluasi; ekspor model"],
