@@ -1,5 +1,8 @@
 # Setup & Deploy
 
+> Proyek sudah dibangun. Untuk panduan operasional dari install sampai aplikasi berjalan (termasuk verifikasi tiap halaman
+> dan masalah umum), lihat [`web/PANDUAN.md`](../web/PANDUAN.md). Dokumen ini menjelaskan cara membangun ulang dari nol.
+
 ## 1. Prasyarat
 
 - Node.js 20 LTS atau lebih baru (`node -v`), Git, akun GitHub dengan akses ke `izviopm/uts-ai-banjir-ciledug`.
@@ -23,9 +26,11 @@ cd web
 ## 3. Dependensi
 
 ```bash
-npm install daisyui@5 motion leaflet react-leaflet @supabase/supabase-js sastrawijs
+npm install daisyui@5 motion leaflet react-leaflet @supabase/supabase-js
 npm install -D vitest @types/leaflet
 ```
+
+> `sastrawijs` **tidak dipakai**: stemming hanya lewat `stem_lookup.json` (lookup-only) agar identik dengan Python.
 
 Aktifkan daisyUI di `app/globals.css` (Tailwind 4):
 ```css

@@ -40,8 +40,9 @@ Semua angka dari data (lihat ARSITEKTUR.md §4), bukan diketik manual.
 - Hasil: 3 baris terpilih disorot di daftar input, dan tabel skor semua baris (bisa diurutkan).
 
 **Bagian D — Evaluasi ROUGE (F8)**
-- Tabel `metode × ROUGE-1/2/L` dan kesepakatan antar-anotator.
-- Sampai notebook 4 dijalankan ulang dengan lembar acuan lengkap, tampilkan `alert` info: "Evaluasi menunggu ringkasan acuan."
+- Tabel `metode × ROUGE-1/2/L`, kesepakatan antar-anotator, dan uji Wilcoxon.
+- Tampilkan `alert-warning`: Hybrid TF-IDF lebih tinggi dari TF-IDF standar pada ROUGE-1/RL, tetapi
+  **belum signifikan** (p > 0,05) dan setara dengan pemilihan acak. Angka dari `laporan/angka.json`.
 
 ---
 
@@ -59,7 +60,8 @@ Tata letak desktop: peta di kiri (±65%), panel kontrol di kanan. HP: peta di at
 - Layer jalan: semua `edges` abu tipis; ruas tergenang (`f = 1`) biru tebal **hanya** saat skenario Banjir.
 - Lingkaran radius titik banjir (biru transparan) + marker; popup: nama & link sumber berita.
 - Marker tempat aman (ikon hijau) dengan popup nama & jenis.
-- Saat animasi: node di `jejak` muncul bertahap sebagai titik oranye; setelah selesai, rute (`path`) digambar merah tebal.
+- Rute hasil (`path`) langsung digambar merah tebal; saat animasi diputar, node di `jejak` muncul bertahap sebagai titik oranye di atasnya.
+- Peta otomatis `fitBounds` ke rute (atau `setView` ke titik awal) supaya jalur tidak keluar layar.
 - Mode **Bandingkan semua**: 4 peta kecil berdampingan (2×2), animasi berjalan bersamaan dengan kecepatan sama.
 - Atribusi wajib: "© OpenStreetMap contributors".
 

@@ -100,4 +100,7 @@ assert len(uji) == 6, uji
 A["nb4"]["wilcoxon"] = uji
 
 Path("laporan/angka.json").write_text(json.dumps(A, ensure_ascii=False, indent=1), encoding="utf8")
+# Salinan untuk web (fallback metrik/ROUGE/benchmark tanpa Supabase).
+Path("web/data").mkdir(parents=True, exist_ok=True)
+Path("web/data/angka.json").write_text(json.dumps(A, ensure_ascii=False, indent=1), encoding="utf8")
 print("laporan/angka.json ditulis:", {k: (list(v)[:6] if isinstance(v, dict) else v) for k, v in A.items()})

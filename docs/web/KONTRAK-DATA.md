@@ -16,8 +16,8 @@ type Preprocessing = {
 ```ts
 type StemLookup = Record<string, string>; // kata → hasil stem Sastrawi Python, hanya untuk kata yang berubah
 ```
-Dibuat oleh `scripts/buat_fixtures_web.py` dari seluruh kata di korpus. Kata yang tidak ada di sini: coba `sastrawijs`; jika tetap
-tidak dikenal, pakai kata apa adanya.
+Dibuat oleh `scripts/buat_fixtures_web.py` dari seluruh kata di korpus. **Lookup-only**: kata yang tidak ada di sini
+dipakai apa adanya (tanpa `sastrawijs`) agar hasil identik dengan Python.
 
 ### `naive_bayes.json`
 ```ts

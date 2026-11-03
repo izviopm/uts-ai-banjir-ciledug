@@ -1,0 +1,207 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: banjir --default, banjir-gelap --prefersdark;
+}
+
+/* Tema terang: abu-hangat, kartu putih, aksen terakota (kontras teks putih ≥ 4,5:1). */
+@plugin "daisyui/theme" {
+  name: "banjir";
+  default: true;
+  color-scheme: light;
+  --color-base-100: #ffffff;
+  --color-base-200: #f4f3f0;
+  --color-base-300: #e6e4df;
+  --color-base-content: #151413;
+  --color-primary: #c8481f;
+  --color-primary-content: #ffffff;
+  --color-secondary: #151413;
+  --color-secondary-content: #ffffff;
+  --color-accent: #e2694b;
+  --color-accent-content: #1a0b05;
+  --color-neutral: #151413;
+  --color-neutral-content: #ffffff;
+  --color-info: #2563eb;
+  --color-info-content: #ffffff;
+  --color-success: #15803d;
+  --color-success-content: #ffffff;
+  --color-warning: #d97706;
+  --color-warning-content: #1c1208;
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+  --radius-selector: 9999px;
+  --radius-field: 1rem;
+  --radius-box: 1.75rem;
+  --border: 1px;
+}
+
+@plugin "daisyui/theme" {
+  name: "banjir-gelap";
+  prefersdark: true;
+  color-scheme: dark;
+  --color-base-100: #1c1b1a;
+  --color-base-200: #121110;
+  --color-base-300: #2d2b29;
+  --color-base-content: #f4f2ee;
+  --color-primary: #ee7f61;
+  --color-primary-content: #1a0b05;
+  --color-secondary: #f4f2ee;
+  --color-secondary-content: #151413;
+  --color-accent: #e2694b;
+  --color-accent-content: #1a0b05;
+  --color-neutral: #2d2b29;
+  --color-neutral-content: #f4f2ee;
+  --color-info: #60a5fa;
+  --color-info-content: #0b1220;
+  --color-success: #4ade80;
+  --color-success-content: #05150b;
+  --color-warning: #fbbf24;
+  --color-warning-content: #1c1208;
+  --color-error: #f87171;
+  --color-error-content: #1c0707;
+  --radius-selector: 9999px;
+  --radius-field: 1rem;
+  --radius-box: 1.75rem;
+  --border: 1px;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100dvh;
+  background-color: var(--color-base-200);
+}
+
+/* Kartu bergaya bento: putih, sudut besar, hampir tanpa bayangan. */
+.kartu {
+  background-color: var(--color-base-100);
+  border-radius: var(--radius-box);
+  border: 1px solid color-mix(in oklab, var(--color-base-300) 70%, transparent);
+}
+
+.pil {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 9999px;
+  border: 1px solid var(--color-base-300);
+  background-color: var(--color-base-100);
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
+/* Fade-in ringan, murni CSS. */
+.muncul {
+  animation: muncul 0.45s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes muncul {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Rute di peta skematik digambar bertahap. */
+.rute-gambar {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: gambar-rute 1.2s ease-out forwards;
+}
+
+@keyframes gambar-rute {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Titik awal di peta */
+.marker-awal span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  background: #dc2626;
+  border: 3px solid #fff;
+  box-shadow:
+    0 0 0 2px #7f1d1d,
+    0 2px 6px rgb(0 0 0 / 0.35);
+}
+
+/* Riak saat peta diklik */
+.denyut span {
+  display: block;
+  width: 44px;
+  height: 44px;
+  border-radius: 9999px;
+  border: 3px solid #dc2626;
+  background: rgb(220 38 38 / 0.18);
+  animation: denyut 0.9s ease-out forwards;
+}
+
+@keyframes denyut {
+  from {
+    transform: scale(0.15);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.label-peta {
+  font-size: 11px;
+  font-weight: 600;
+  fill: var(--color-base-content);
+  paint-order: stroke;
+  stroke: var(--color-base-100);
+  stroke-width: 3px;
+  stroke-linejoin: round;
+}
+
+/* Leaflet butuh tinggi eksplisit */
+.peta {
+  height: 100%;
+  width: 100%;
+  min-height: 360px;
+  border-radius: 1.25rem;
+  z-index: 0;
+}
+
+.leaflet-container {
+  background: var(--color-base-200);
+  font-family: var(--font-sans);
+}
+
+.leaflet-popup-content {
+  margin: 0.6rem 0.8rem;
+  font-size: 0.8rem;
+  line-height: 1.35;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.prosa {
+  text-wrap: pretty;
+}

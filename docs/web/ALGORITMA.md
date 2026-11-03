@@ -31,8 +31,8 @@ export function preprocess(teks: string, d: { stop: Set<string>; slang: Record<s
 }
 ```
 
-`stem(w)`: `stemLookup[w]` → jika tidak ada, `sastrawijs` → jika gagal, `w`. Fixtures hanya memakai kata yang ada di lookup,
-jadi hasil uji tidak bergantung pada sastrawijs.
+`stem(w)`: `stemLookup[w]` → jika tidak ada, **kembalikan `w` apa adanya** (lookup-only). Ini keputusan
+final agar hasil TypeScript identik dengan `scripts/buat_fixtures_web.py`; `sastrawijs` tidak dipakai.
 
 **Uji:** untuk setiap kasus di `fixtures/preprocessing_nb.json`, `preprocess(text_raw) === text_clean`.
 

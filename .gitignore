@@ -2,7 +2,9 @@
 __pycache__/
 .ipynb_checkpoints/
 .env*
+!.env.example
 node_modules/
+.DS_Store
 .next/
 data/cache/
 referensi/*.pdf

@@ -39,14 +39,14 @@ Semua riset sudah selesai di notebook Python. Web dibutuhkan untuk **presentasi 
 
 | ID | Fitur | Prioritas | Kriteria diterima |
 |---|---|---|---|
-| F1 | **Beranda**: diagram alur agen, angka kunci (jumlah tweet, k klaster, F1 terbaik, A* vs UCS), link GitHub/Colab | P0 | Angka diambil dari data (bukan diketik manual) |
+| F1 | **Beranda**: diagram alur agen, angka kunci (jumlah tweet, k klaster, F1 terbaik, A* vs UCS), link GitHub/Colab | P0 | Angka diambil dari data (bukan diketik manual). Tampilkan dua angka terpisah: 3.390 tweet dianalisis dan 1.220 tweet berlabel |
 | F2 | **Klaster & Ringkasan**: daftar 11 klaster (kata kunci, jumlah, % laporan), ringkasan 3 tweet tiap klaster, sebaran 2D | P0 | Data dari `klaster_ringkasan.json`; klaster laporan tinggi tampil paling atas |
 | F3 | **Ringkas teks sendiri**: tempel ≥ 5 tweet (satu per baris) → ringkasan Hybrid TF-IDF 3 tweet beserta skor | P0 | Lolos `web/fixtures/hybrid_tfidf.json` |
 | F4 | **Rute Evakuasi**: peta Ciledug, titik banjir (BPBD) & tempat aman (OSM), pilih titik awal, skenario normal/banjir, hasil A* | P0 | Lolos `web/fixtures/searching.json` |
 | F5 | **Animasi pencarian**: BFS/DFS/A* (dan UCS) menjelajah peta node demi node, bisa dibandingkan berdampingan | P0 | Urutan node yang di-expand identik dengan fixtures |
 | F6 | **Klasifikasi**: tabel metrik NB/KNN/DT + confusion matrix dari Supabase; kotak uji "ketik tweet → laporan/bukan + probabilitas" | P1 | Lolos `web/fixtures/preprocessing_nb.json` |
 | F7 | **Benchmark searching**: tabel/grafik rata-rata expanded & jarak per algoritma dari tabel `search_runs` | P1 | Data dari Supabase |
-| F8 | **Evaluasi ROUGE**: tabel ROUGE Hybrid TF-IDF vs baseline dan kesepakatan antar-anotator | P1 | Menunggu notebook 4 dijalankan ulang setelah lembar acuan terisi; tampilkan "menunggu evaluasi" bila belum ada |
+| F8 | **Evaluasi ROUGE**: tabel ROUGE Hybrid TF-IDF vs baseline dan kesepakatan antar-anotator | P1 | Angka dari `laporan/angka.json`; sertakan catatan Wilcoxon bahwa peningkatan belum signifikan |
 | F9 | **Tentang**: tim, dosen, dataset & sitasi, keterbatasan | P1 | Sitasi sesuai `referensi/daftar-pustaka.md` |
 | F10 | Tema terang/gelap, tampilan rapi di HP | P1 | Lolos cek di lebar 375 px |
 | F11 | Klik sembarang titik di peta sebagai titik awal | P2 | Titik di-snap ke node terdekat |
